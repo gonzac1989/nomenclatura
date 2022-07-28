@@ -4,18 +4,13 @@
  */
 package presentacion;
 
-import java.awt.List;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.poi.hssf.usermodel.HSSFCell;
@@ -25,26 +20,22 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hssf.util.CellReference;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellValue;
-import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.FormulaEvaluator;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
  *
  * @author e274263
  */
-public class jp_ingreso extends javax.swing.JPanel {
-
+public class jp_ingreso_nom extends javax.swing.JPanel {
     ArrayList<String> listado_departamentos = new ArrayList<>();
     ArrayList<String> listado_tipo_dispositivos = new ArrayList<>();
-
     /**
-     * Creates new form jp_ingreso
+     * Creates new form jp_ingreso_nuevo
      */
-    public jp_ingreso() {
+    public jp_ingreso_nom() {
         initComponents();
         cargar_departamentos();
         cargar_tipo_dispositivos();
@@ -59,16 +50,13 @@ public class jp_ingreso extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        cmb_departamento = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         cmb_tipo = new javax.swing.JComboBox<>();
         lblvalor = new javax.swing.JLabel();
-
-        setForeground(new java.awt.Color(255, 255, 255));
-
-        jLabel1.setText("UBICACION:");
+        jLabel1 = new javax.swing.JLabel();
+        cmb_departamento = new javax.swing.JComboBox<>();
+        jButton2 = new javax.swing.JButton();
 
         jButton1.setText("GENERAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -81,6 +69,15 @@ public class jp_ingreso extends javax.swing.JPanel {
 
         lblvalor.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblvalor.setText("-");
+
+        jLabel1.setText("UBICACION:");
+
+        jButton2.setText("LIMPIAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -98,10 +95,12 @@ public class jp_ingreso extends javax.swing.JPanel {
                             .addComponent(cmb_departamento, 0, 796, Short.MAX_VALUE)
                             .addComponent(cmb_tipo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblvalor, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1))
-                        .addGap(0, 650, Short.MAX_VALUE)))
+                        .addComponent(lblvalor, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 631, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -118,19 +117,21 @@ public class jp_ingreso extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(lblvalor, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         /*
-        
+
         System.out.println(devuelve_codigo_ubicacion((String) cmb_departamento.getSelectedItem()));
         System.out.println(devuelve_codigo_red((String) cmb_departamento.getSelectedItem()));
         System.out.println(devuelve_codigo_dispositivo((String) cmb_tipo.getSelectedItem()));
         System.out.println("---");
-         */
+        */
         String codigo_ubicacion, codigo_red, codigo_dispositivo;
         codigo_ubicacion = devuelve_codigo_ubicacion((String) cmb_departamento.getSelectedItem());
         codigo_red = devuelve_codigo_red((String) cmb_departamento.getSelectedItem());
@@ -155,10 +156,15 @@ public class jp_ingreso extends javax.swing.JPanel {
 
         String valor_final = primeros_4_caracteres + textoFormateado;
         lblvalor.setText(valor_final);
-
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    String devuelve_ultimos_4_caracteres(String texto) {
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        cmb_departamento.setSelectedIndex(0);
+        cmb_tipo.setSelectedIndex(0);
+        lblvalor.setText("-");
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+String devuelve_ultimos_4_caracteres(String texto) {
         return texto.substring(texto.length() - 4, texto.length());
     }
 
@@ -234,7 +240,7 @@ public class jp_ingreso extends javax.swing.JPanel {
         } catch (IOException ex) {
             System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
         } catch (Exception ex) {
-            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(jp_ingreso_nom.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 excelStream.close();
@@ -313,7 +319,7 @@ public class jp_ingreso extends javax.swing.JPanel {
         } catch (IOException ex) {
             System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
         } catch (Exception ex) {
-            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(jp_ingreso_nom.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 excelStream.close();
@@ -461,7 +467,7 @@ public class jp_ingreso extends javax.swing.JPanel {
         } catch (IOException ex) {
             System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
         } catch (Exception ex) {
-            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(jp_ingreso_nom.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 excelStream.close();
@@ -485,11 +491,11 @@ public class jp_ingreso extends javax.swing.JPanel {
         }
         return false;
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cmb_departamento;
     private javax.swing.JComboBox<String> cmb_tipo;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblvalor;
