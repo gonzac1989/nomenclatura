@@ -29,13 +29,15 @@ import org.apache.poi.ss.usermodel.Workbook;
  *
  * @author e274263
  */
-public class jp_ingreso_nom extends javax.swing.JPanel {
+public class jp_ingreso extends javax.swing.JPanel {
+
     ArrayList<String> listado_departamentos = new ArrayList<>();
     ArrayList<String> listado_tipo_dispositivos = new ArrayList<>();
+
     /**
      * Creates new form jp_ingreso_nuevo
      */
-    public jp_ingreso_nom() {
+    public jp_ingreso() {
         initComponents();
         cargar_departamentos();
         cargar_tipo_dispositivos();
@@ -53,10 +55,12 @@ public class jp_ingreso_nom extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         cmb_tipo = new javax.swing.JComboBox<>();
-        lblvalor = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         cmb_departamento = new javax.swing.JComboBox<>();
         jButton2 = new javax.swing.JButton();
+        txtvalor = new javax.swing.JTextField();
+
+        setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jButton1.setText("GENERAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -67,9 +71,6 @@ public class jp_ingreso_nom extends javax.swing.JPanel {
 
         jLabel2.setText("TIPO DE DISPOSITIVO:");
 
-        lblvalor.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblvalor.setText("-");
-
         jLabel1.setText("UBICACION:");
 
         jButton2.setText("LIMPIAR");
@@ -79,34 +80,36 @@ public class jp_ingreso_nom extends javax.swing.JPanel {
             }
         });
 
+        txtvalor.setEditable(false);
+        txtvalor.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtvalor.setText("-");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtvalor)
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 10, 10)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cmb_departamento, 0, 796, Short.MAX_VALUE)
+                            .addComponent(cmb_departamento, 0, 781, Short.MAX_VALUE)
                             .addComponent(cmb_tipo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblvalor, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 631, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2)))
-                .addContainerGap())
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 736, Short.MAX_VALUE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(5, 5, 5))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(5, 5, 5)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(cmb_departamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -115,12 +118,12 @@ public class jp_ingreso_nom extends javax.swing.JPanel {
                     .addComponent(jLabel2)
                     .addComponent(cmb_tipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(lblvalor, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtvalor, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(5, 5, 5))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -131,13 +134,13 @@ public class jp_ingreso_nom extends javax.swing.JPanel {
         System.out.println(devuelve_codigo_red((String) cmb_departamento.getSelectedItem()));
         System.out.println(devuelve_codigo_dispositivo((String) cmb_tipo.getSelectedItem()));
         System.out.println("---");
-        */
+         */
         String codigo_ubicacion, codigo_red, codigo_dispositivo;
         codigo_ubicacion = devuelve_codigo_ubicacion((String) cmb_departamento.getSelectedItem());
         codigo_red = devuelve_codigo_red((String) cmb_departamento.getSelectedItem());
-        codigo_dispositivo = devuelve_codigo_dispositivo((String) cmb_tipo.getSelectedItem());
+        codigo_dispositivo = devuelve_codigo_dispositivo((String) cmb_tipo.getSelectedItem()); //0 PC (PUEDE SER 1 TAMBIEN, AUN NO ESTA IMPLEMENTADA ESA OPCION)
 
-        ArrayList<String> lista = devuelve_listado_PC(codigo_ubicacion, codigo_red, codigo_dispositivo);
+        ArrayList<String> lista = devuelve_lista_segun_tipo_dispositivo(codigo_ubicacion, codigo_red, codigo_dispositivo);
 
         Collections.sort(lista);
         String max_valor = (Collections.max(lista));
@@ -155,16 +158,36 @@ public class jp_ingreso_nom extends javax.swing.JPanel {
         String primeros_4_caracteres = max_valor.substring(0, 4);
 
         String valor_final = primeros_4_caracteres + textoFormateado;
-        lblvalor.setText(valor_final);
+        txtvalor.setText("Codigo generado para " + (String) cmb_tipo.getSelectedItem() + " " + devuelve_ubicacion((String) cmb_departamento.getSelectedItem()) + " " + valor_final);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    ArrayList<String> devuelve_lista_segun_tipo_dispositivo(String codigo_ubicacion, String codigo_red, String codigo_dispositivo) {
+        if (codigo_dispositivo.equals("0")) {
+            return devuelve_listado_PC(codigo_ubicacion, codigo_red, codigo_dispositivo);
+        }
+        if (codigo_dispositivo.equals("8")) {
+            return devuelve_listado_Serv_Impresion(codigo_ubicacion, codigo_red, codigo_dispositivo);
+        }
+        if (codigo_dispositivo.equals("6")) {
+            return devuelve_listado_Print_Servers(codigo_ubicacion, codigo_red, codigo_dispositivo);
+        }
+        return new ArrayList();
+    }
+
+    String devuelve_ubicacion(String texto) {
+        String[] cortarString_seleccion = texto.split("::");
+
+        return cortarString_seleccion[0] + " " + cortarString_seleccion[1];
+
+    }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         cmb_departamento.setSelectedIndex(0);
         cmb_tipo.setSelectedIndex(0);
-        lblvalor.setText("-");
+        txtvalor.setText("-");
     }//GEN-LAST:event_jButton2ActionPerformed
 
-String devuelve_ultimos_4_caracteres(String texto) {
+    String devuelve_ultimos_4_caracteres(String texto) {
         return texto.substring(texto.length() - 4, texto.length());
     }
 
@@ -240,7 +263,7 @@ String devuelve_ultimos_4_caracteres(String texto) {
         } catch (IOException ex) {
             System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
         } catch (Exception ex) {
-            Logger.getLogger(jp_ingreso_nom.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 excelStream.close();
@@ -319,7 +342,7 @@ String devuelve_ultimos_4_caracteres(String texto) {
         } catch (IOException ex) {
             System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
         } catch (Exception ex) {
-            Logger.getLogger(jp_ingreso_nom.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 excelStream.close();
@@ -380,7 +403,7 @@ String devuelve_ultimos_4_caracteres(String texto) {
         String[] cortarString_seleccion = texto.split("::");
         for (int i = 0; i < listado_departamentos.size(); i++) {
             String[] cortarString_listado = listado_departamentos.get(i).split("::");
-            if (cortarString_listado[1].equals(cortarString_seleccion[0])&&(cortarString_listado[2].equals(cortarString_seleccion[1]))) {
+            if (cortarString_listado[1].equals(cortarString_seleccion[0]) && (cortarString_listado[2].equals(cortarString_seleccion[1]))) {
                 return cortarString_listado[4];
             }
         }
@@ -430,6 +453,7 @@ String devuelve_ultimos_4_caracteres(String texto) {
             // Para este ejemplo vamos a recorrer las filas obteniendo los datos que queremos    
             //System.out.println("INICIO");
             for (int fila = 0; fila <= rows; fila++) {
+                //System.out.println(fila);
                 hssfRow = hssfSheet.getRow(fila);
                 if (hssfRow == null) {
                     break;
@@ -467,7 +491,171 @@ String devuelve_ultimos_4_caracteres(String texto) {
         } catch (IOException ex) {
             System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
         } catch (Exception ex) {
-            Logger.getLogger(jp_ingreso_nom.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                excelStream.close();
+            } catch (IOException ex) {
+                System.out.println("Error in file processing after close it (Error al procesar el fichero después de cerrarlo): " + ex);
+            }
+        }
+        //System.out.println("FIN");
+        return lista;
+    }
+
+    ArrayList<String> devuelve_listado_Serv_Impresion(String ubicacion, String red, String tipo_dispositivo) {
+        InputStream excelStream = null;
+        ArrayList<String> lista = new ArrayList<>();
+
+        try {
+            Boolean ya_paso_primer_columna = false;
+            excelStream = new FileInputStream(new File("Administracion IP.xls"));
+            // High level representation of a workbook.
+            // Representación del más alto nivel de la hoja excel.
+            HSSFWorkbook hssfWorkbook = new HSSFWorkbook(excelStream);
+            // We chose the sheet is passed as parameter. 
+            // Elegimos la hoja que se pasa por parámetro.
+            HSSFSheet hssfSheet = hssfWorkbook.getSheetAt(2);//reemplazar por hoja 0, que tiene codigos deptos e ip, etc
+            // An object that allows us to read a row of the excel sheet, and extract from it the cell contents.
+            // Objeto que nos permite leer un fila de la hoja excel, y de aquí extraer el contenido de las celdas.
+            HSSFRow hssfRow;
+            // Initialize the object to read the value of the cell 
+            // Inicializo el objeto que leerá el valor de la celda
+            HSSFCell cell;
+            // I get the number of rows occupied on the sheet
+            // Obtengo el número de filas ocupadas en la hoja
+            int rows = hssfSheet.getLastRowNum();
+            // I get the number of columns occupied on the sheet
+            // Obtengo el número de columnas ocupadas en la hoja
+            int cols = 0;
+            // A string used to store the reading cell
+            // Cadena que usamos para almacenar la lectura de la celda
+            FormulaEvaluator evaluator = hssfWorkbook.getCreationHelper().createFormulaEvaluator();
+            // For this example we'll loop through the rows getting the data we want
+            // Para este ejemplo vamos a recorrer las filas obteniendo los datos que queremos    
+            //System.out.println("INICIO");
+            for (int fila = 0; fila <= rows; fila++) {
+                //System.out.println(fila);
+                hssfRow = hssfSheet.getRow(fila);
+                if (hssfRow == null) {
+                    break;
+                } else {
+                    //for (short c = 0; c < (cols = hssfRow.getLastCellNum()); c++) {
+                    if (fila == 0) {
+                        //PARA QUE SALTEE LA PRIMER FILA QUE TIENE EL TITULO
+                        if (!ya_paso_primer_columna) {
+                            ya_paso_primer_columna = true;
+                        }
+                        continue;
+                    }
+                    if ((hssfRow.getCell(8)) == null) {
+                        continue;
+                    }
+                    if (hssfRow.getCell(8).getCellType() == Cell.CELL_TYPE_FORMULA) {
+                        switch (hssfRow.getCell(8).getCachedFormulaResultType()) {
+                            case Cell.CELL_TYPE_NUMERIC:
+                                CellReference cellReference = new CellReference("I" + (fila));
+                                Row row = hssfSheet.getRow(fila);
+                                Cell cell1 = row.getCell(cellReference.getCol());
+                                CellValue cellValue = evaluator.evaluate(cell1);
+                                if (coincide_ubicacion(ubicacion, red, tipo_dispositivo, chequear_string_null(cellValue.getStringValue()))) {
+                                    //System.out.println(chequear_string_null(cellValue.getStringValue()));
+                                    lista.add(chequear_string_null(cellValue.getStringValue()));
+                                }
+                                break;
+                        }
+                    }
+
+                }
+            }
+        } catch (FileNotFoundException fileNotFoundException) {
+            System.out.println("The file not exists (No se encontró el fichero): " + fileNotFoundException);
+        } catch (IOException ex) {
+            System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
+        } catch (Exception ex) {
+            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                excelStream.close();
+            } catch (IOException ex) {
+                System.out.println("Error in file processing after close it (Error al procesar el fichero después de cerrarlo): " + ex);
+            }
+        }
+        //System.out.println("FIN");
+        return lista;
+    }
+
+    ArrayList<String> devuelve_listado_Print_Servers(String ubicacion, String red, String tipo_dispositivo) {
+        InputStream excelStream = null;
+        ArrayList<String> lista = new ArrayList<>();
+
+        try {
+            Boolean ya_paso_primer_columna = false;
+            excelStream = new FileInputStream(new File("Administracion IP.xls"));
+            // High level representation of a workbook.
+            // Representación del más alto nivel de la hoja excel.
+            HSSFWorkbook hssfWorkbook = new HSSFWorkbook(excelStream);
+            // We chose the sheet is passed as parameter. 
+            // Elegimos la hoja que se pasa por parámetro.
+            HSSFSheet hssfSheet = hssfWorkbook.getSheetAt(3);//reemplazar por hoja 0, que tiene codigos deptos e ip, etc
+            // An object that allows us to read a row of the excel sheet, and extract from it the cell contents.
+            // Objeto que nos permite leer un fila de la hoja excel, y de aquí extraer el contenido de las celdas.
+            HSSFRow hssfRow;
+            // Initialize the object to read the value of the cell 
+            // Inicializo el objeto que leerá el valor de la celda
+            HSSFCell cell;
+            // I get the number of rows occupied on the sheet
+            // Obtengo el número de filas ocupadas en la hoja
+            int rows = hssfSheet.getLastRowNum();
+            // I get the number of columns occupied on the sheet
+            // Obtengo el número de columnas ocupadas en la hoja
+            int cols = 0;
+            // A string used to store the reading cell
+            // Cadena que usamos para almacenar la lectura de la celda
+            FormulaEvaluator evaluator = hssfWorkbook.getCreationHelper().createFormulaEvaluator();
+            // For this example we'll loop through the rows getting the data we want
+            // Para este ejemplo vamos a recorrer las filas obteniendo los datos que queremos    
+            //System.out.println("INICIO");
+            for (int fila = 0; fila <= rows; fila++) {
+                //System.out.println(fila);
+                hssfRow = hssfSheet.getRow(fila);
+                if (hssfRow == null) {
+                    break;
+                } else {
+                    //for (short c = 0; c < (cols = hssfRow.getLastCellNum()); c++) {
+                    if (fila == 0) {
+                        //PARA QUE SALTEE LA PRIMER FILA QUE TIENE EL TITULO
+                        if (!ya_paso_primer_columna) {
+                            ya_paso_primer_columna = true;
+                        }
+                        continue;
+                    }
+                    if ((hssfRow.getCell(7)) == null) {
+                        continue;
+                    }
+                    if (hssfRow.getCell(7).getCellType() == Cell.CELL_TYPE_FORMULA) {
+                        switch (hssfRow.getCell(7).getCachedFormulaResultType()) {
+                            case Cell.CELL_TYPE_NUMERIC:
+                                CellReference cellReference = new CellReference("H" + (fila));
+                                Row row = hssfSheet.getRow(fila);
+                                Cell cell1 = row.getCell(cellReference.getCol());
+                                CellValue cellValue = evaluator.evaluate(cell1);
+                                if (coincide_ubicacion(ubicacion, red, tipo_dispositivo, chequear_string_null(cellValue.getStringValue()))) {
+                                    System.out.println(chequear_string_null(cellValue.getStringValue()));
+                                    lista.add(chequear_string_null(cellValue.getStringValue()));
+                                }
+                                break;
+                        }
+                    }
+
+                }
+            }
+        } catch (FileNotFoundException fileNotFoundException) {
+            System.out.println("The file not exists (No se encontró el fichero): " + fileNotFoundException);
+        } catch (IOException ex) {
+            System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
+        } catch (Exception ex) {
+            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 excelStream.close();
@@ -498,6 +686,6 @@ String devuelve_ultimos_4_caracteres(String texto) {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel lblvalor;
+    private javax.swing.JTextField txtvalor;
     // End of variables declaration//GEN-END:variables
 }
