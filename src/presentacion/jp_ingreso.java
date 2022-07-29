@@ -30,7 +30,7 @@ import org.apache.poi.ss.usermodel.Workbook;
  * @author e274263
  */
 public class jp_ingreso extends javax.swing.JPanel {
-
+    
     ArrayList<String> listado_departamentos = new ArrayList<>();
     ArrayList<String> listado_tipo_dispositivos = new ArrayList<>();
 
@@ -128,23 +128,28 @@ public class jp_ingreso extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        /*
-
-        System.out.println(devuelve_codigo_ubicacion((String) cmb_departamento.getSelectedItem()));
-        System.out.println(devuelve_codigo_red((String) cmb_departamento.getSelectedItem()));
-        System.out.println(devuelve_codigo_dispositivo((String) cmb_tipo.getSelectedItem()));
-        System.out.println("---");
-         */
         String codigo_ubicacion, codigo_red, codigo_dispositivo;
         codigo_ubicacion = devuelve_codigo_ubicacion((String) cmb_departamento.getSelectedItem());
         codigo_red = devuelve_codigo_red((String) cmb_departamento.getSelectedItem());
         codigo_dispositivo = devuelve_codigo_dispositivo((String) cmb_tipo.getSelectedItem()); //0 PC (PUEDE SER 1 TAMBIEN, AUN NO ESTA IMPLEMENTADA ESA OPCION)
 
         ArrayList<String> lista = devuelve_lista_segun_tipo_dispositivo(codigo_ubicacion, codigo_red, codigo_dispositivo);
-
+        
+        if (lista == null || lista.isEmpty()) {
+            txtvalor.setText("Codigo generado para " +(String) cmb_tipo.getSelectedItem() + " " + devuelve_ubicacion((String) cmb_departamento.getSelectedItem()) + " " + nuevo_codigo(codigo_ubicacion, codigo_red, codigo_dispositivo));
+        } else {
+            presentar_resultado(lista);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+    
+    String nuevo_codigo(String codigo_ubicacion, String codigo_red, String codigo_dispositivo) {
+        return codigo_ubicacion + codigo_red + codigo_dispositivo + "0001";
+    }
+    
+    void presentar_resultado(ArrayList<String> lista) {
         Collections.sort(lista);
         String max_valor = (Collections.max(lista));
-
+        
         String ultimos_4_caracteres = devuelve_ultimos_4_caracteres(max_valor);
 
         //System.out.println(ultimos_4_caracteres);
@@ -156,29 +161,35 @@ public class jp_ingreso extends javax.swing.JPanel {
         String textoFormateado = String.format("%4s", nuevo_valor).replace(' ', '0');
         //System.out.println(textoFormateado);
         String primeros_4_caracteres = max_valor.substring(0, 4);
-
+        
         String valor_final = primeros_4_caracteres + textoFormateado;
         txtvalor.setText("Codigo generado para " + (String) cmb_tipo.getSelectedItem() + " " + devuelve_ubicacion((String) cmb_departamento.getSelectedItem()) + " " + valor_final);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
+    }
+    
     ArrayList<String> devuelve_lista_segun_tipo_dispositivo(String codigo_ubicacion, String codigo_red, String codigo_dispositivo) {
         if (codigo_dispositivo.equals("0")) {
             return devuelve_listado_PC(codigo_ubicacion, codigo_red, codigo_dispositivo);
         }
-        if (codigo_dispositivo.equals("8")) {
-            return devuelve_listado_Serv_Impresion(codigo_ubicacion, codigo_red, codigo_dispositivo);
+        if (codigo_dispositivo.equals("2")) {
+            return devuelve_listado_Raspberry(codigo_ubicacion, codigo_red, codigo_dispositivo);
         }
         if (codigo_dispositivo.equals("6")) {
             return devuelve_listado_Print_Servers(codigo_ubicacion, codigo_red, codigo_dispositivo);
         }
-        return new ArrayList();
+        if (codigo_dispositivo.equals("8")) {
+            return devuelve_listado_Serv_Impresion(codigo_ubicacion, codigo_red, codigo_dispositivo);
+        }
+        if (codigo_dispositivo.equals("9")) {
+            return devuelve_listado_Notebooks(codigo_ubicacion, codigo_red, codigo_dispositivo);
+        }
+        return null;
     }
-
+    
     String devuelve_ubicacion(String texto) {
         String[] cortarString_seleccion = texto.split("::");
-
-        return cortarString_seleccion[0] + " " + cortarString_seleccion[1];
-
+        
+        return cortarString_seleccion[1] + " " + cortarString_seleccion[2];
+        
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -186,16 +197,16 @@ public class jp_ingreso extends javax.swing.JPanel {
         cmb_tipo.setSelectedIndex(0);
         txtvalor.setText("-");
     }//GEN-LAST:event_jButton2ActionPerformed
-
+    
     String devuelve_ultimos_4_caracteres(String texto) {
         return texto.substring(texto.length() - 4, texto.length());
     }
-
+    
     void cargar_departamentos() {
         InputStream excelStream = null;
         listado_departamentos = null;
         listado_departamentos = new ArrayList<>();
-
+        
         try {
             Boolean ya_agrego_campo_vacio = false;
             excelStream = new FileInputStream(new File("Administracion IP.xls"));
@@ -252,8 +263,9 @@ public class jp_ingreso extends javax.swing.JPanel {
                     //}
                     if (fila > 0) {
                         if (convertir_texto_a_numero(cellValue_id) > 0) {
-                            cmb_departamento.addItem(cellValue_departamento + "::" + cellValue_localidad + devuelve_observacion(cellValue_obs));
+                            cmb_departamento.addItem(convertir_texto_a_numero(cellValue_id) + "::" + cellValue_departamento + "::" + cellValue_localidad + devuelve_observacion(cellValue_obs));
                             listado_departamentos.add(convertir_texto_a_numero(cellValue_id) + "::" + cellValue_departamento + "::" + cellValue_localidad + "::" + cellValue_codigo + "::" + cellValue_codigo_red + "::" + cellValue_ip + "::" + cellValue_obs);
+                            //System.out.println(convertir_texto_a_numero(cellValue_id) + "::" + cellValue_departamento + "::" + cellValue_localidad + "::" + cellValue_codigo + "::" + cellValue_codigo_red + "::" + cellValue_ip + "::" + cellValue_obs);
                         }
                     }
                 }
@@ -272,19 +284,19 @@ public class jp_ingreso extends javax.swing.JPanel {
             }
         }
     }
-
+    
     String devuelve_observacion(String texto) {
         if (!texto.equals("")) {
             return "::" + texto;
         }
         return "";
     }
-
+    
     void cargar_tipo_dispositivos() {
         InputStream excelStream = null;
         listado_tipo_dispositivos = null;
         listado_tipo_dispositivos = new ArrayList<>();
-
+        
         try {
             Boolean ya_agrego_campo_vacio = false;
             excelStream = new FileInputStream(new File("Administracion IP.xls"));
@@ -351,7 +363,7 @@ public class jp_ingreso extends javax.swing.JPanel {
             }
         }
     }
-
+    
     Integer convertir_texto_a_numero(String texto) {
         if (texto.isEmpty() || texto.equals("")) {
             return -1;
@@ -362,18 +374,18 @@ public class jp_ingreso extends javax.swing.JPanel {
         }
         //Float id=Float.parseFloat(texto);
         int i = new Double(texto).intValue();
-
+        
         return i;
     }
-
+    
     String chequear_string_null(Object texto) throws Exception {
-
+        
         if (texto == null) {
             return "";
         }
         return texto.toString();
     }
-
+    
     String chequear_formula(Workbook wb, Sheet hoja, Cell texto, int fila) throws Exception {
         FormulaEvaluator evaluator = wb.getCreationHelper().createFormulaEvaluator();
 
@@ -387,29 +399,29 @@ public class jp_ingreso extends javax.swing.JPanel {
         //assertEquals("3", strValue);
         return cellValue.getStringValue();
     }
-
+    
     String devuelve_codigo_ubicacion(String texto) {
         String[] cortarString_seleccion = texto.split("::");
         for (int i = 0; i < listado_departamentos.size(); i++) {
             String[] cortarString_listado = listado_departamentos.get(i).split("::");
-            if (cortarString_listado[1].equals(cortarString_seleccion[0])) {
+            if (cortarString_listado[0].equals(cortarString_seleccion[0])) {
                 return cortarString_listado[3];
             }
         }
         return "";
     }
-
+    
     String devuelve_codigo_red(String texto) {
         String[] cortarString_seleccion = texto.split("::");
         for (int i = 0; i < listado_departamentos.size(); i++) {
             String[] cortarString_listado = listado_departamentos.get(i).split("::");
-            if (cortarString_listado[1].equals(cortarString_seleccion[0]) && (cortarString_listado[2].equals(cortarString_seleccion[1]))) {
+            if (cortarString_listado[0].equals(cortarString_seleccion[0])) {
                 return cortarString_listado[4];
             }
         }
         return "";
     }
-
+    
     String devuelve_codigo_dispositivo(String texto) {
         //String[] cortarString_seleccion = dispositivo.split("::");
         for (int i = 0; i < listado_tipo_dispositivos.size(); i++) {
@@ -420,11 +432,11 @@ public class jp_ingreso extends javax.swing.JPanel {
         }
         return "";
     }
-
+    
     ArrayList<String> devuelve_listado_PC(String ubicacion, String red, String tipo_dispositivo) {
         InputStream excelStream = null;
         ArrayList<String> lista = new ArrayList<>();
-
+        
         try {
             Boolean ya_paso_primer_columna = false;
             excelStream = new FileInputStream(new File("Administracion IP.xls"));
@@ -483,7 +495,7 @@ public class jp_ingreso extends javax.swing.JPanel {
                                 break;
                         }
                     }
-
+                    
                 }
             }
         } catch (FileNotFoundException fileNotFoundException) {
@@ -502,11 +514,11 @@ public class jp_ingreso extends javax.swing.JPanel {
         //System.out.println("FIN");
         return lista;
     }
-
+    
     ArrayList<String> devuelve_listado_Serv_Impresion(String ubicacion, String red, String tipo_dispositivo) {
         InputStream excelStream = null;
         ArrayList<String> lista = new ArrayList<>();
-
+        
         try {
             Boolean ya_paso_primer_columna = false;
             excelStream = new FileInputStream(new File("Administracion IP.xls"));
@@ -565,7 +577,7 @@ public class jp_ingreso extends javax.swing.JPanel {
                                 break;
                         }
                     }
-
+                    
                 }
             }
         } catch (FileNotFoundException fileNotFoundException) {
@@ -584,11 +596,11 @@ public class jp_ingreso extends javax.swing.JPanel {
         //System.out.println("FIN");
         return lista;
     }
-
+    
     ArrayList<String> devuelve_listado_Print_Servers(String ubicacion, String red, String tipo_dispositivo) {
         InputStream excelStream = null;
         ArrayList<String> lista = new ArrayList<>();
-
+        
         try {
             Boolean ya_paso_primer_columna = false;
             excelStream = new FileInputStream(new File("Administracion IP.xls"));
@@ -641,13 +653,13 @@ public class jp_ingreso extends javax.swing.JPanel {
                                 Cell cell1 = row.getCell(cellReference.getCol());
                                 CellValue cellValue = evaluator.evaluate(cell1);
                                 if (coincide_ubicacion(ubicacion, red, tipo_dispositivo, chequear_string_null(cellValue.getStringValue()))) {
-                                    System.out.println(chequear_string_null(cellValue.getStringValue()));
+                                    //System.out.println(chequear_string_null(fila+" --- "+cellValue.getStringValue()));
                                     lista.add(chequear_string_null(cellValue.getStringValue()));
                                 }
                                 break;
                         }
                     }
-
+                    
                 }
             }
         } catch (FileNotFoundException fileNotFoundException) {
@@ -666,14 +678,178 @@ public class jp_ingreso extends javax.swing.JPanel {
         //System.out.println("FIN");
         return lista;
     }
-
+    
+    ArrayList<String> devuelve_listado_Raspberry(String ubicacion, String red, String tipo_dispositivo) {
+        InputStream excelStream = null;
+        ArrayList<String> lista = new ArrayList<>();
+        
+        try {
+            Boolean ya_paso_primer_columna = false;
+            excelStream = new FileInputStream(new File("Administracion IP.xls"));
+            // High level representation of a workbook.
+            // Representación del más alto nivel de la hoja excel.
+            HSSFWorkbook hssfWorkbook = new HSSFWorkbook(excelStream);
+            // We chose the sheet is passed as parameter. 
+            // Elegimos la hoja que se pasa por parámetro.
+            HSSFSheet hssfSheet = hssfWorkbook.getSheetAt(5);//reemplazar por hoja 0, que tiene codigos deptos e ip, etc
+            // An object that allows us to read a row of the excel sheet, and extract from it the cell contents.
+            // Objeto que nos permite leer un fila de la hoja excel, y de aquí extraer el contenido de las celdas.
+            HSSFRow hssfRow;
+            // Initialize the object to read the value of the cell 
+            // Inicializo el objeto que leerá el valor de la celda
+            HSSFCell cell;
+            // I get the number of rows occupied on the sheet
+            // Obtengo el número de filas ocupadas en la hoja
+            int rows = hssfSheet.getLastRowNum();
+            // I get the number of columns occupied on the sheet
+            // Obtengo el número de columnas ocupadas en la hoja
+            int cols = 0;
+            // A string used to store the reading cell
+            // Cadena que usamos para almacenar la lectura de la celda
+            FormulaEvaluator evaluator = hssfWorkbook.getCreationHelper().createFormulaEvaluator();
+            // For this example we'll loop through the rows getting the data we want
+            // Para este ejemplo vamos a recorrer las filas obteniendo los datos que queremos    
+            //System.out.println("INICIO");
+            for (int fila = 0; fila <= rows; fila++) {
+                //System.out.println(fila);
+                hssfRow = hssfSheet.getRow(fila);
+                if (hssfRow == null) {
+                    break;
+                } else {
+                    //for (short c = 0; c < (cols = hssfRow.getLastCellNum()); c++) {
+                    if (fila == 0) {
+                        //PARA QUE SALTEE LA PRIMER FILA QUE TIENE EL TITULO
+                        if (!ya_paso_primer_columna) {
+                            ya_paso_primer_columna = true;
+                        }
+                        continue;
+                    }
+                    if ((hssfRow.getCell(7)) == null) {
+                        continue;
+                    }
+                    if (hssfRow.getCell(7).getCellType() == Cell.CELL_TYPE_FORMULA) {
+                        switch (hssfRow.getCell(7).getCachedFormulaResultType()) {
+                            case Cell.CELL_TYPE_NUMERIC:
+                                CellReference cellReference = new CellReference("H" + (fila));
+                                Row row = hssfSheet.getRow(fila);
+                                Cell cell1 = row.getCell(cellReference.getCol());
+                                CellValue cellValue = evaluator.evaluate(cell1);
+                                if (coincide_ubicacion(ubicacion, red, tipo_dispositivo, chequear_string_null(cellValue.getStringValue()))) {
+                                    //System.out.println(chequear_string_null(fila+" --- "+cellValue.getStringValue()));
+                                    lista.add(chequear_string_null(cellValue.getStringValue()));
+                                }
+                                break;
+                        }
+                    }
+                    
+                }
+            }
+        } catch (FileNotFoundException fileNotFoundException) {
+            System.out.println("The file not exists (No se encontró el fichero): " + fileNotFoundException);
+        } catch (IOException ex) {
+            System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
+        } catch (Exception ex) {
+            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                excelStream.close();
+            } catch (IOException ex) {
+                System.out.println("Error in file processing after close it (Error al procesar el fichero después de cerrarlo): " + ex);
+            }
+        }
+        //System.out.println("FIN");
+        return lista;
+    }
+    
+    ArrayList<String> devuelve_listado_Notebooks(String ubicacion, String red, String tipo_dispositivo) {
+        InputStream excelStream = null;
+        ArrayList<String> lista = new ArrayList<>();
+        
+        try {
+            Boolean ya_paso_primer_columna = false;
+            excelStream = new FileInputStream(new File("Administracion IP.xls"));
+            // High level representation of a workbook.
+            // Representación del más alto nivel de la hoja excel.
+            HSSFWorkbook hssfWorkbook = new HSSFWorkbook(excelStream);
+            // We chose the sheet is passed as parameter. 
+            // Elegimos la hoja que se pasa por parámetro.
+            HSSFSheet hssfSheet = hssfWorkbook.getSheetAt(4);//reemplazar por hoja 0, que tiene codigos deptos e ip, etc
+            // An object that allows us to read a row of the excel sheet, and extract from it the cell contents.
+            // Objeto que nos permite leer un fila de la hoja excel, y de aquí extraer el contenido de las celdas.
+            HSSFRow hssfRow;
+            // Initialize the object to read the value of the cell 
+            // Inicializo el objeto que leerá el valor de la celda
+            HSSFCell cell;
+            // I get the number of rows occupied on the sheet
+            // Obtengo el número de filas ocupadas en la hoja
+            int rows = hssfSheet.getLastRowNum();
+            // I get the number of columns occupied on the sheet
+            // Obtengo el número de columnas ocupadas en la hoja
+            int cols = 0;
+            // A string used to store the reading cell
+            // Cadena que usamos para almacenar la lectura de la celda
+            FormulaEvaluator evaluator = hssfWorkbook.getCreationHelper().createFormulaEvaluator();
+            // For this example we'll loop through the rows getting the data we want
+            // Para este ejemplo vamos a recorrer las filas obteniendo los datos que queremos    
+            //System.out.println("INICIO");
+            for (int fila = 0; fila <= rows; fila++) {
+                //System.out.println(fila);
+                hssfRow = hssfSheet.getRow(fila);
+                if (hssfRow == null) {
+                    break;
+                } else {
+                    //for (short c = 0; c < (cols = hssfRow.getLastCellNum()); c++) {
+                    if (fila == 0) {
+                        //PARA QUE SALTEE LA PRIMER FILA QUE TIENE EL TITULO
+                        if (!ya_paso_primer_columna) {
+                            ya_paso_primer_columna = true;
+                        }
+                        continue;
+                    }
+                    if ((hssfRow.getCell(8)) == null) {
+                        continue;
+                    }
+                    if (hssfRow.getCell(8).getCellType() == Cell.CELL_TYPE_FORMULA) {
+                        switch (hssfRow.getCell(8).getCachedFormulaResultType()) {
+                            case Cell.CELL_TYPE_NUMERIC:
+                                CellReference cellReference = new CellReference("I" + (fila));
+                                Row row = hssfSheet.getRow(fila);
+                                Cell cell1 = row.getCell(cellReference.getCol());
+                                CellValue cellValue = evaluator.evaluate(cell1);
+                                if (coincide_ubicacion(ubicacion, red, tipo_dispositivo, chequear_string_null(cellValue.getStringValue()))) {
+                                    //System.out.println(chequear_string_null(fila+" --- "+cellValue.getStringValue()));
+                                    lista.add(chequear_string_null(cellValue.getStringValue()));
+                                }
+                                break;
+                        }
+                    }
+                    
+                }
+            }
+        } catch (FileNotFoundException fileNotFoundException) {
+            System.out.println("The file not exists (No se encontró el fichero): " + fileNotFoundException);
+        } catch (IOException ex) {
+            System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
+        } catch (Exception ex) {
+            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                excelStream.close();
+            } catch (IOException ex) {
+                System.out.println("Error in file processing after close it (Error al procesar el fichero después de cerrarlo): " + ex);
+            }
+        }
+        //System.out.println("FIN");
+        return lista;
+    }
+    
     Boolean coincide_ubicacion(String ubicacion, String red, String tipo_dispositivo, String celda) {
         String celda_ubicacion, celda_red, celda_tipo;
-
+        
         celda_ubicacion = celda.substring(0, 1);
         celda_red = celda.substring(1, 3);
         celda_tipo = celda.substring(3, 4);
-
+        
         if (ubicacion.equals(celda_ubicacion) && red.equals(celda_red) && tipo_dispositivo.equals(celda_tipo)) {
             return true;
         }
