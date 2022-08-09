@@ -30,7 +30,7 @@ import persistencia.consultas;
  *
  * @author e274263
  */
-public class jp_ingreso extends javax.swing.JPanel {
+public class jp_listado extends javax.swing.JPanel {
 
     ArrayList<String> listado_departamentos = new ArrayList<>();
     ArrayList<String> listado_tipo_dispositivos = new ArrayList<>();
@@ -38,10 +38,9 @@ public class jp_ingreso extends javax.swing.JPanel {
     /**
      * Creates new form jp_ingreso_nuevo
      */
-    public jp_ingreso() {
+    public jp_listado() {
         initComponents();
-        cargar_departamentos();
-        cargar_tipo_dispositivos();
+
     }
 
     /**
@@ -54,24 +53,12 @@ public class jp_ingreso extends javax.swing.JPanel {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        cmb_tipo = new javax.swing.JComboBox<>();
-        jLabel1 = new javax.swing.JLabel();
-        cmb_departamento = new javax.swing.JComboBox<>();
         jButton2 = new javax.swing.JButton();
-        txtvalor = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         cmb_tipo_direccion = new javax.swing.JComboBox<>();
         txt_tipo_direccion = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        txt_tipo_direccion1 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tbl_listado = new javax.swing.JTable();
 
         setBorder(javax.swing.BorderFactory.createEtchedBorder());
         setPreferredSize(new java.awt.Dimension(986, 274));
@@ -83,10 +70,6 @@ public class jp_ingreso extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setText("TIPO DE DISPOSITIVO:");
-
-        jLabel1.setText("UBICACION:");
-
         jButton2.setText("LIMPIAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,25 +77,24 @@ public class jp_ingreso extends javax.swing.JPanel {
             }
         });
 
-        txtvalor.setEditable(false);
-        txtvalor.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtvalor.setText("-");
-
-        jLabel3.setText("TIPO:");
+        jLabel3.setText("FILTRO:");
 
         cmb_tipo_direccion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "DHCP", "IP FIJA" }));
 
         txt_tipo_direccion.setEditable(false);
 
-        jLabel4.setText("CASO:");
-
-        jLabel5.setText("NOMBRE:");
-
-        jLabel6.setText("DESCRIPCION:");
-
-        txt_tipo_direccion1.setEditable(false);
-
-        jLabel7.setText("IP:");
+        tbl_listado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tbl_listado);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -120,42 +102,19 @@ public class jp_ingreso extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtvalor)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jButton1)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel7))
-                            .addGap(10, 10, 10)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(cmb_departamento, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(cmb_tipo_direccion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
-                                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(txt_tipo_direccion, javax.swing.GroupLayout.DEFAULT_SIZE, 457, Short.MAX_VALUE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(cmb_tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(6, 6, 6)
-                                    .addComponent(txt_tipo_direccion1))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(0, 0, 0))
-                                .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING))))
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(82, 82, 82)
+                        .addComponent(cmb_tipo_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_tipo_direccion, javax.swing.GroupLayout.DEFAULT_SIZE, 457, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -165,41 +124,18 @@ public class jp_ingreso extends javax.swing.JPanel {
                     .addComponent(jLabel3)
                     .addComponent(cmb_tipo_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_tipo_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(cmb_departamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(cmb_tipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_tipo_direccion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addComponent(txtvalor, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2)))
+                    .addComponent(jButton2))
+                .addGap(10, 10, 10))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        /*
         String codigo_ubicacion, codigo_red, codigo_dispositivo;
         codigo_ubicacion = devuelve_codigo_ubicacion((String) cmb_departamento.getSelectedItem());
         codigo_red = devuelve_codigo_red((String) cmb_departamento.getSelectedItem());
@@ -212,50 +148,13 @@ public class jp_ingreso extends javax.swing.JPanel {
         } else {
             presentar_resultado(lista);
         }
+        */
     }//GEN-LAST:event_jButton1ActionPerformed
 
     String nuevo_codigo(String codigo_ubicacion, String codigo_red, String codigo_dispositivo) {
         return codigo_ubicacion + codigo_red + codigo_dispositivo + "0001";
     }
 
-    void presentar_resultado(ArrayList<String> lista) {
-        Collections.sort(lista);
-        String max_valor = (Collections.max(lista));
-
-        String ultimos_4_caracteres = devuelve_ultimos_4_caracteres(max_valor);
-
-        //System.out.println(ultimos_4_caracteres);
-        int nuevo_valor = Integer.parseInt(ultimos_4_caracteres);
-        nuevo_valor++;
-        //System.out.println(nuevo_valor);
-
-        //System.out.println("***VALOR FINAL***");
-        String textoFormateado = String.format("%4s", nuevo_valor).replace(' ', '0');
-        //System.out.println(textoFormateado);
-        String primeros_4_caracteres = max_valor.substring(0, 4);
-
-        String valor_final = primeros_4_caracteres + textoFormateado;
-        txtvalor.setText("Codigo generado para " + (String) cmb_tipo.getSelectedItem() + " " + devuelve_ubicacion((String) cmb_departamento.getSelectedItem()) + " " + valor_final);
-    }
-
-    ArrayList<String> devuelve_lista_segun_tipo_dispositivo(String codigo_ubicacion, String codigo_red, String codigo_dispositivo) {
-        if (codigo_dispositivo.equals("0")) {
-            return devuelve_listado_PC(codigo_ubicacion, codigo_red, codigo_dispositivo);
-        }
-        if (codigo_dispositivo.equals("2")) {
-            return devuelve_listado_Raspberry(codigo_ubicacion, codigo_red, codigo_dispositivo);
-        }
-        if (codigo_dispositivo.equals("6")) {
-            return devuelve_listado_Print_Servers(codigo_ubicacion, codigo_red, codigo_dispositivo);
-        }
-        if (codigo_dispositivo.equals("8")) {
-            return devuelve_listado_Serv_Impresion(codigo_ubicacion, codigo_red, codigo_dispositivo);
-        }
-        if (codigo_dispositivo.equals("9")) {
-            return devuelve_listado_Notebooks(codigo_ubicacion, codigo_red, codigo_dispositivo);
-        }
-        return null;
-    }
 
     String devuelve_ubicacion(String texto) {
         String[] cortarString_seleccion = texto.split("::");
@@ -265,110 +164,14 @@ public class jp_ingreso extends javax.swing.JPanel {
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        cmb_departamento.setSelectedIndex(0);
-        cmb_tipo.setSelectedIndex(0);
-        cmb_tipo_direccion.setSelectedIndex(0);
-        txtvalor.setText("-");
+        //cmb_departamento.setSelectedIndex(0);
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     String devuelve_ultimos_4_caracteres(String texto) {
         return texto.substring(texto.length() - 4, texto.length());
     }
 
-    void cargar_departamentos() {
-
-        consultas c = new consultas();
-        try {
-            listado_departamentos = c.devuelve_listado_departamentos();
-            for (int i = 0; i < listado_departamentos.size(); i++) {
-                cmb_departamento.addItem(listado_departamentos.get(i));
-            }
-        } catch (Exception ex) {
-            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        /*
-        InputStream excelStream = null;
-        listado_departamentos = null;
-        listado_departamentos = new ArrayList<>();
-        
-        try {
-            Boolean ya_agrego_campo_vacio = false;
-            excelStream = new FileInputStream(new File("Administracion IP.xls"));
-            // High level representation of a workbook.
-            // Representación del más alto nivel de la hoja excel.
-            HSSFWorkbook hssfWorkbook = new HSSFWorkbook(excelStream);
-            // We chose the sheet is passed as parameter. 
-            // Elegimos la hoja que se pasa por parámetro.
-            HSSFSheet hssfSheet = hssfWorkbook.getSheetAt(0);//reemplazar por hoja 0, que tiene codigos deptos e ip, etc
-            // An object that allows us to read a row of the excel sheet, and extract from it the cell contents.
-            // Objeto que nos permite leer un fila de la hoja excel, y de aquí extraer el contenido de las celdas.
-            HSSFRow hssfRow;
-            // Initialize the object to read the value of the cell 
-            // Inicializo el objeto que leerá el valor de la celda
-            HSSFCell cell;
-            // I get the number of rows occupied on the sheet
-            // Obtengo el número de filas ocupadas en la hoja
-            int rows = hssfSheet.getLastRowNum();
-            // I get the number of columns occupied on the sheet
-            // Obtengo el número de columnas ocupadas en la hoja
-            int cols = 0;
-            // A string used to store the reading cell
-            // Cadena que usamos para almacenar la lectura de la celda
-            String cellValue_id = "";
-            String cellValue_departamento = "";
-            String cellValue_codigo = "";
-            String cellValue_localidad = "";
-            String cellValue_codigo_red = "";
-            String cellValue_ip = "";
-            String cellValue_obs = "";
-            // For this example we'll loop through the rows getting the data we want
-            // Para este ejemplo vamos a recorrer las filas obteniendo los datos que queremos            
-            for (int fila = 0; fila <= rows; fila++) {
-                hssfRow = hssfSheet.getRow(fila);
-                if (hssfRow == null) {
-                    break;
-                } else {
-                    //for (short c = 0; c < (cols = hssfRow.getLastCellNum()); c++) {
-                    if (fila == 0) {
-                        //PARA QUE SALTEE LA PRIMER FILA QUE TIENE EL TITULO
-                        if (!ya_agrego_campo_vacio) {
-                            cmb_departamento.addItem("");
-                            ya_agrego_campo_vacio = true;
-                        }
-                        continue;
-                    }
-                    cellValue_id = chequear_string_null(hssfRow.getCell(0));
-                    cellValue_departamento = chequear_string_null(hssfRow.getCell(1));
-                    cellValue_localidad = chequear_string_null(hssfRow.getCell(2));
-                    cellValue_codigo = chequear_string_null(hssfRow.getCell(3));
-                    cellValue_codigo_red = chequear_string_null(hssfRow.getCell(4));
-                    cellValue_ip = chequear_string_null(hssfRow.getCell(5));
-                    cellValue_obs = chequear_string_null(hssfRow.getCell(9));
-                    //}
-                    if (fila > 0) {
-                        if (convertir_texto_a_numero(cellValue_id) > 0) {
-                            cmb_departamento.addItem(convertir_texto_a_numero(cellValue_id) + "::" + cellValue_departamento + "::" + cellValue_localidad + devuelve_observacion(cellValue_obs));
-                            listado_departamentos.add(convertir_texto_a_numero(cellValue_id) + "::" + cellValue_departamento + "::" + cellValue_localidad + "::" + cellValue_codigo + "::" + cellValue_codigo_red + "::" + cellValue_ip + "::" + cellValue_obs);
-                            //System.out.println(convertir_texto_a_numero(cellValue_id) + "::" + cellValue_departamento + "::" + cellValue_localidad + "::" + cellValue_codigo + "::" + cellValue_codigo_red + "::" + cellValue_ip + "::" + cellValue_obs);
-                        }
-                    }
-                }
-            }
-        } catch (FileNotFoundException fileNotFoundException) {
-            System.out.println("The file not exists (No se encontró el fichero): " + fileNotFoundException);
-        } catch (IOException ex) {
-            System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
-        } catch (Exception ex) {
-            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                excelStream.close();
-            } catch (IOException ex) {
-                System.out.println("Error in file processing after close it (Error al procesar el fichero después de cerrarlo): " + ex);
-            }
-        }
-         */
-    }
 
     String devuelve_observacion(String texto) {
         if (!texto.equals("")) {
@@ -377,78 +180,7 @@ public class jp_ingreso extends javax.swing.JPanel {
         return "";
     }
 
-    void cargar_tipo_dispositivos() {
-        InputStream excelStream = null;
-        listado_tipo_dispositivos = null;
-        listado_tipo_dispositivos = new ArrayList<>();
-
-        try {
-            Boolean ya_agrego_campo_vacio = false;
-            excelStream = new FileInputStream(new File("Administracion IP.xls"));
-            // High level representation of a workbook.
-            // Representación del más alto nivel de la hoja excel.
-            HSSFWorkbook hssfWorkbook = new HSSFWorkbook(excelStream);
-            // We chose the sheet is passed as parameter. 
-            // Elegimos la hoja que se pasa por parámetro.
-            HSSFSheet hssfSheet = hssfWorkbook.getSheetAt(7);//reemplazar por hoja 0, que tiene codigos deptos e ip, etc
-            // An object that allows us to read a row of the excel sheet, and extract from it the cell contents.
-            // Objeto que nos permite leer un fila de la hoja excel, y de aquí extraer el contenido de las celdas.
-            HSSFRow hssfRow;
-            // Initialize the object to read the value of the cell 
-            // Inicializo el objeto que leerá el valor de la celda
-            HSSFCell cell;
-            // I get the number of rows occupied on the sheet
-            // Obtengo el número de filas ocupadas en la hoja
-            int rows = hssfSheet.getLastRowNum();
-            // I get the number of columns occupied on the sheet
-            // Obtengo el número de columnas ocupadas en la hoja
-            int cols = 0;
-            // A string used to store the reading cell
-            // Cadena que usamos para almacenar la lectura de la celda
-            String cellValue_nombre = "";
-            String cellValue_codigo = "";
-            // For this example we'll loop through the rows getting the data we want
-            // Para este ejemplo vamos a recorrer las filas obteniendo los datos que queremos            
-            for (int fila = 0; fila <= rows; fila++) {
-                hssfRow = hssfSheet.getRow(fila);
-                if (hssfRow == null) {
-                    break;
-                } else {
-                    //for (short c = 0; c < (cols = hssfRow.getLastCellNum()); c++) {
-                    if (fila == 0) {
-                        //PARA QUE SALTEE LA PRIMER FILA QUE TIENE EL TITULO
-                        if (!ya_agrego_campo_vacio) {
-                            cmb_tipo.addItem("");
-                            ya_agrego_campo_vacio = true;
-                        }
-                        continue;
-                    }
-                    cellValue_nombre = chequear_string_null(hssfRow.getCell(0));
-                    cellValue_codigo = chequear_string_null(hssfRow.getCell(1));
-                    //}
-                    if (fila > 0) {
-                        if (convertir_texto_a_numero(cellValue_codigo) >= 0) {
-                            cmb_tipo.addItem(cellValue_nombre);
-                            listado_tipo_dispositivos.add(convertir_texto_a_numero(cellValue_codigo) + "::" + cellValue_nombre);
-                        }
-                    }
-                }
-            }
-        } catch (FileNotFoundException fileNotFoundException) {
-            System.out.println("The file not exists (No se encontró el fichero): " + fileNotFoundException);
-        } catch (IOException ex) {
-            System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
-        } catch (Exception ex) {
-            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                excelStream.close();
-            } catch (IOException ex) {
-                System.out.println("Error in file processing after close it (Error al procesar el fichero después de cerrarlo): " + ex);
-            }
-        }
-    }
-
+    
     Integer convertir_texto_a_numero(String texto) {
         if (texto.isEmpty() || texto.equals("")) {
             return -1;
@@ -588,7 +320,7 @@ public class jp_ingreso extends javax.swing.JPanel {
         } catch (IOException ex) {
             System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
         } catch (Exception ex) {
-            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(jp_listado.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 excelStream.close();
@@ -670,7 +402,7 @@ public class jp_ingreso extends javax.swing.JPanel {
         } catch (IOException ex) {
             System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
         } catch (Exception ex) {
-            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(jp_listado.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 excelStream.close();
@@ -752,7 +484,7 @@ public class jp_ingreso extends javax.swing.JPanel {
         } catch (IOException ex) {
             System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
         } catch (Exception ex) {
-            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(jp_listado.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 excelStream.close();
@@ -834,7 +566,7 @@ public class jp_ingreso extends javax.swing.JPanel {
         } catch (IOException ex) {
             System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
         } catch (Exception ex) {
-            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(jp_listado.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 excelStream.close();
@@ -916,7 +648,7 @@ public class jp_ingreso extends javax.swing.JPanel {
         } catch (IOException ex) {
             System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
         } catch (Exception ex) {
-            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(jp_listado.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
                 excelStream.close();
@@ -941,24 +673,12 @@ public class jp_ingreso extends javax.swing.JPanel {
         return false;
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> cmb_departamento;
-    private javax.swing.JComboBox<String> cmb_tipo;
     private javax.swing.JComboBox<String> cmb_tipo_direccion;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tbl_listado;
     private javax.swing.JTextField txt_tipo_direccion;
-    private javax.swing.JTextField txt_tipo_direccion1;
-    private javax.swing.JTextField txtvalor;
     // End of variables declaration//GEN-END:variables
 }

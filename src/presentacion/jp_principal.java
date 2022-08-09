@@ -22,10 +22,10 @@ public class jp_principal extends javax.swing.JFrame {
     public jp_principal() {
         initComponents();
         
-        setSize(1180, 390);
+        setSize(1250, 390);
         setLocationRelativeTo(null);
         
-        jp.setSize(new Dimension(1100, 340));
+        jp.setSize(new Dimension(1200, 340));
         jPanel1.add(jp);
     }
 

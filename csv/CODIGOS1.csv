@@ -1,0 +1,611 @@
+ID,DEPARTAMENTO,LOCALIDAD,COD. DPTO,CODIGO RED,IP_DESDE,IP_HASTA,SNA,DHCP,OBSERVACIONES
+58,ARTIGAS,Artigas ,G,01,10.40.1.15,10.40.1.249,GA0Gxx,SI, / Rio Branco 379
+59,ARTIGAS,Bella Union,G,11,10.40.17.15,10.40.17.249,GB0Gxx,,RIVERA 710
+60,ARTIGAS,Depósito Artigas,G,21,10.40.33.15,10.40.33.249,GA1G??,,tomas berretta 282
+332,ARTIGAS,Artigas - Terminal de Omnibus,G,31,10.40.49.15,10.40.49.249,GA2G??,,
+380,ARTIGAS,Tomás Gomensoro,G,61,10.40.65.15,10.40.65.249,GF0G??,,
+537,ARTIGAS,Tienda Artigas,G,41,10.40.97.15,10.40.97.249,,,Luis A. de Herrera 298
+402,ARTIGAS,Termas del Arapey,G,51,10.40.81.15,10.40.81.249,GH0G??,,
+566,ARTIGAS,Baltasar Brum,G,71,10.40.113.15,10.40.113.249,,,"CL ARTIGAS, GRAL. JOSE GERVASIO P: 339U"
+1,CANELONES,Canelones,A,01,10.46.1.15,10.46.1.249,AA0A??,SI,Treinta y Tres 374
+2,CANELONES,Pando ,A,11,10.46.17.15,10.46.17.249,AG0A??,SI,E. Zinola y 18 de Julio
+3,CANELONES,Sala Lumiere,A,19,10.46.25.15,10.46.25.249,AA1A??,,
+4,CANELONES,Atlantida,A,21,10.46.33.15,10.46.33.249,AS0A??,,
+5,CANELONES,La Floresta (Viejo),A,29,10.46.41.15,10.46.41.249,,,
+6,CANELONES,Central San Jose de Carrasco,A,31,10.46.49.15,10.46.49.249,AW0A??,SI,(Shangrila) Central - No Atencion Comercial / Av. Uruguay esq Venecia
+7,CANELONES,Parque del Plata,A,39,10.46.57.15,10.46.57.249,AM0A??,SI,CALLE B Y CALLE 15
+585,CANELONES,Las Piedras,A,40,10.46.64.15,10.46.64.249,,,IP fija sin emulación
+8,CANELONES,Las Piedras,A,41,10.46.65.15,10.46.65.249,,,IP fija con emulación
+586,CANELONES,Las Piedras,A,42,10.46.66.15,10.46.65.249,,,AV. ARTIGAS 585 
+587,CANELONES,Las Piedras,A,43,10.46.67.15,10.46.66.249,,SI,Rango DHCP
+9,CANELONES,Sauce,A,49,10.46.73.15,10.46.73.249,AN0AT?,,
+10,CANELONES,Lagomar,A,51,10.46.81.15,10.46.81.249,,,Local Dado de Baja
+11,CANELONES,Backofice San Jose de Carrasco/Lagomar 2,A,52,10.46.82.15,10.46.82.249,AZ0AB?,,Gianattasio al km 21:300 frente a ANCAP - José Enrique Rodó S/N° esquina Gral Artigas
+12,CANELONES,Empalme Olmos,A,59,10.46.89.15,10.46.89.249,AO0A??,,
+13,CANELONES,Tala,A,61,10.46.97.15,10.46.97.249,,,
+14,CANELONES,Progreso,A,69,10.46.105.15,10.46.105.249,,,
+15,CANELONES,San Ramon,A,71,10.46.113.15,10.46.113.249,,,
+16,CANELONES,Santa Teresita,A,79,10.46.121.15,10.46.121.249,AJ0A??,,
+17,CANELONES,Santa Rosa,A,81,10.46.129.15,10.46.129.249,,,
+18,CANELONES,Solymar,A,89,10.46.137.15,10.46.137.249,AQ0A??,,"Av Gianatasio km 24 detrás del tanque de Ose, calle lateral hacia Av Summers"
+19,CANELONES,La Paz,A,91,10.46.145.15,10.46.145.249,,,Artigas 370
+20,CANELONES,Cuchilla Alta,A,99,10.46.153.15,10.46.153.249,,,
+21,CANELONES,Toledo,A,A1,10.46.161.15,10.46.161.249,,,
+22,CANELONES,San Jacinto PE,A,A9,10.46.169.15,10.46.169.249,,,Piedras s/n entre José Artigas y Joaquín Suarez
+23,CANELONES,Migues,A,B1,10.46.177.15,10.46.177.249,,,
+24,CANELONES,Soca,A,B9,10.46.185.15,10.46.185.249,,,
+25,CANELONES,Joanico,A,C1,10.46.193.15,10.46.193.249,AX0A??,,
+26,CANELONES,Los Cerrillos,A,C9,10.46.201.15,10.46.201.249,AY0A??,,
+27,CANELONES,Santa Lucia,A,D1,10.46.209.15,10.46.209.249,,,
+28,CANELONES,Los Titanes,A,D9,10.46.217.15,10.46.217.249,,,
+29,CANELONES,Salinas,A,E1,10.46.225.15,10.46.225.249,,,Centro Comercial Tienda - Calle Julieta S/N
+30,CANELONES,San Luis,A,E9,10.46.233.15,10.46.233.249,,,
+403,CANELONES,Shopping Costa Urbana,A,F1,10.46.241.15,10.46.241.249,AW1AK?,SI,"Aerosur y Giannattasio PB (Tienda) , P2 (Centro Cívico)"
+503,CANELONES,Tienda Shopping Costa Urbana ,A,F8,10.46.248.15,10.46.248.249,,,Aerosur y Giannattasio PB
+505,CANELONES,Central Salinas,A,E4,10.46.228.15,10.46.228.249,,SI,Mamboretá s/n esq. De La fe - Salinas Planta Externa
+464,CANELONES,La Floresta ,A,2D,10.46.45.15,10.46.45.249,A20A??,SI,DHCP
+511,CANELONES,El Pinar,A,34,10.46.52.15,10.46.52.249,,,Santa Rosa Padron 15104 M 217  solar 8
+524,CANELONES,San Jacinto,A,3C,10.46.60.15,10.46.60.249,AT0A5?,,"Av. Artigas s/n, M122, P126 "
+531,CANELONES,Datacenter Pando,A,84,10.46.132.15,10.46.132.249,,,Ruta Bypass de Pando / Polo Tecnologico de Canelones
+556,CANELONES,San Bautista,A,CC,10.46.204.15,10.46.204.249,,,Margarita Fariña P: 95U M: 18 S: 1
+581,CANELONES,Tienda Shopping Las Piedras,A,AD,10.46.173.15,10.46.173.249,,SI,Bulevar del Bicentenario 318 Local
+607,CANELONES,Central Barros Blancos,A,EC,10.46.236.15,10.46.236.249,,,"Ruta 8, km. 27 esq. Arapey"
+51,CERRO LARGO,Melo,E,01,10.51.1.15,10.51.1.249,EA0E??,SI,18 de Julio 696
+52,CERRO LARGO,Rio Branco,E,11,10.51.17.15,10.51.17.249,EB0E??,,JOAQUIN GUNDIN 88
+53,CERRO LARGO,Fraile Muerto,E,21,10.51.33.15,10.51.33.249,EC0E??,SI,
+404,CERRO LARGO,Lago Merín,E,21,10.51.65.15,10.51.65.249,EF0E??,,Calle 18 y 23 padrón 3442 manzana 89 (46798018)
+410,CERRO LARGO,Rio Branco PE,E,31,10.51.49.15,10.51.49.249,EA1E??,,Virrey Arredondo N°  983  Tel. 46752399
+462,CERRO LARGO,Tupambae (CAC),E,51,10.51.81.15,10.51.81.249,ED0E??,,Ruta 7 entre Bulevar Artigas y San Severino S/N
+74,COLONIA,Colonia,L,01,10.42.0.15,10.42.1.249,,,IP fija sin emulación
+74,COLONIA,Colonia,L,01,10.42.1.15,10.42.1.249,L00L0?,,IP fija con emulación
+75,COLONIA,Colonia,L,02,10.42.2.15,10.42.2.249,,,Rango reservado
+76,COLONIA,Colonia,L,03,10.42.3.15,10.42.3.249,,,Rango DHCP
+75,COLONIA,Rosario,L,11,10.42.17.15,10.42.17.249,L80L4?,SI,
+76,COLONIA,Carmelo ,L,21,10.42.33.15,10.42.33.249,L30L6?,SI,
+77,COLONIA,Tarariras,L,31,10.42.49.15,10.42.49.249,LE0LD?,,Piedras 1856
+78,COLONIA,Nueva Helvecia Planta Externa,L,41,10.42.65.15,10.42.65.249,,SI,
+553,COLONIA,Nueva Helvecia Centro Comercial,L,C8,10.42.200.15,10.42.200.249,,,Nuevo Local - Centro Comercial Nueva Helvecia 
+79,COLONIA,Ombues de Lavalle,L,51,10.42.81.15,10.42.81.249,LJ0LF?,,Rodó 982
+510,COLONIA,Nueva Palmira,L,C0,10.42.192.15,10.42.192.15,LG0LH?,,Jacinto Laguna 1039 Local Comercial
+80,COLONIA,Nueva Palmira PE,L,61,10.42.97.15,10.42.97.249,LG0LH?,,
+81,COLONIA,Juan Lacaze,L,71,10.42.113.15,10.42.113.249,LF0L9?,SI,
+565,COLONIA,Juan Lacaze Provisorio,L,D9,10.42.217.15,10.42.217.249,,,José Salvo 235/237 (local del BPS) ///Local en Reforma
+82,COLONIA,Central Colonia Valdense,L,81,10.42.129.15,10.42.129.249,,,Central / Planta Externa
+83,COLONIA,Conchillas Viejo,L,91,10.42.145.15,10.42.145.249,,,Francisco Capandegui S/N - USAR RANGO PARA CONCHILLAS PLANTA EXTERNA
+517,COLONIA,Conchillas,L,D0,10.42.208.15,10.42.208.249,LI0LC?,,Francisco Capandeguy  -  padrón 594U
+333,COLONIA,Rosario - Supermercado Casa Nelson,L,A1,10.42.161.15,10.42.161.249,L81Lxx,,
+542,COLONIA,Miguelete,L,A0,10.42.160.15,10.42.160.249,,,Cl 25 de Marzo P: 93U
+543,COLONIA,Esperanzuela,L,A2,10.42.162.15,10.42.162.249,,,P: 2796U
+544,COLONIA,Balneario Santa Ana,L,A3,10.42.163.15,10.42.163.249,,,Cl Ibirapita P: 6883U
+401,COLONIA,Puerto Colonia (CAC),L,B1,10.42.177.15,10.42.177.249,,,Terminal Portuaria (local 012) (Tel. 45223831 45223832)
+460,COLONIA,Colonia Valdense Centro Comercial,L,B9,10.42.185.15,10.42.185.249,,,Av.Daniel Armand Ugon  s/n 
+597,COLONIA,Playa Fomento PE,L,C1,10.42.193.249,10.42.193.249,,,"Caseta - Ruta 51 s/n entre Viraró y Timbó  -34.430.099   -57.253.109 Telefono 45872298
+"
+101,DURAZNO,Durazno,Q,01,10.49.1.15,10.49.1.249,,SI,Rivera 564
+102,DURAZNO,Sarandi del Yi ,Q,11,10.49.17.15,10.49.17.249,,,
+103,DURAZNO,Durazno Planta Externa,Q,21,10.49.33.15,10.49.33.249,,,
+375,DURAZNO,Durazno Atencion Personalizada,Q,31,10.49.49.15,10.49.49.249,,,18 de Julio 595 y Manuel Oribe
+90,FLORES,Trinidad,N,01,10.54.1.15,10.54.1.249,,SI,
+91,FLORIDA,Florida,O,01,10.48.1.15,10.48.1.249,,,
+92,FLORIDA,Casupa ,O,11,10.48.17.15,10.48.17.249,,,
+93,FLORIDA,Sarandi Grande,O,21,10.48.33.15,10.48.33.249,,,
+94,FLORIDA,Fray Marcos,O,31,10.48.49.15,10.48.49.249,,,
+95,FLORIDA,25 de Mayo,O,41,10.48.65.15,10.48.65.249,,,
+459,FLORIDA,Florida Provisorio,O,51,10.48.81.15,10.48.81.249,,,Calle Antonio Ma. Fernandez 872 
+557,FLORIDA,Cerro Colorado,O,61,10.48.97.15,10.48.97.249,,,
+558,FLORIDA,Chamizo,O,71,10.48.113.15,10.48.113.249,,,
+559,FLORIDA,25 de Agosto,O,81,10.48.129.15,10.48.129.249,,,
+96,LAVALLEJA,Minas  ,P,01,10.56.1.15,10.56.1.249,,,Jose Enrique Rodó 61
+97,LAVALLEJA,Batlle y Ordoñez,P,11,10.56.17.15,10.56.17.249,,,
+98,LAVALLEJA,Jose Pedro Varela,P,21,10.56.33.15,10.56.33.249,,,
+99,LAVALLEJA,Solis de Mataojo,P,31,10.56.49.15,10.56.49.249,,,
+100,LAVALLEJA,Mariscala,P,41,10.56.65.15,10.56.65.249,,,
+331,LAVALLEJA,Taller Transporte Minas,P,51,10.56.81.15,10.56.81.249,,,
+381,LAVALLEJA,Jose Pedro Varela PE,P,71,10.56.113.15,10.56.113.249,,,Planta Externa
+467,MALDONADO,Maldonado,B,00,10.58.0.15,10.58.0.245,,,IP fija sin emulación
+31,MALDONADO,Maldonado,B,01,10.58.1.15,10.58.1.245,,,IP fija con emulación
+468,MALDONADO,Maldonado,B,02,10.58.2.15,10.58.2.245,,,Rango switches / Camaras
+469,MALDONADO,Maldonado (DHCP),B,03,10.58.3.1,10.58.3.254,,SI,Rango DHCP--------Florida S/N esquina Javier De Viana
+32,MALDONADO,Parada 5,B,11,10.58.17.15,10.58.17.249,B50B??,SI,Av. Pedragosa Sierra y Francia
+33,MALDONADO,Peninsula,B,21,10.58.33.15,10.58.33.249,,SI,Calle 24 y 25
+34,MALDONADO,San Carlos ,B,31,10.58.49.15,10.58.49.249,B20B7?,SI,18 de Julio y Mariano Soler
+35,MALDONADO,Piriapolis  ,B,41,10.58.65.15,10.58.65.249,B70B??,SI,Héctor Barrios y Buenos Aires
+36,MALDONADO,Aigua (CAC),B,61,10.58.97.15,10.58.97.249,,,25 de Agosto 846
+37,MALDONADO,Pan de Azucar,B,71,10.58.113.15,10.58.113.249,B30BL?,SI,Ituzaingó 581 
+38,MALDONADO,Aeropuerto Laguna del Sauce,B,81,10.58.129.15,10.58.129.249,BA0B??,,
+39,MALDONADO,Balneario Solis,B,A1,10.58.161.15,10.58.161.249,,SI,
+40,MALDONADO,Depósito Maldonado,B,B1,10.58.177.15,10.58.177.249,,SI,
+41,MALDONADO,Puerto Punta del Este,B,C1,10.58.193.15,10.58.193.249,B00BP?,,
+302,MALDONADO,Maldonado Plaza,B,51,10.58.81.15,10.58.81.249,,,
+379,MALDONADO,La Barra,B,D1,10.58.209.15,10.58.209.249,,, 
+387,MALDONADO,Portezuelo,B,E1,10.58.225.15,10.58.225.249,B30B??,,"Chalet ""El Bungalow"" Punta Ballena, Padrón 1255, Manzana 117"
+389,MALDONADO,José Ignacio,B,E9,10.58.233.15,10.58.233.249,B52B??,,
+409,MALDONADO,Piriapolis La Pasiva,B,D9,10.58.217.15,10.58.217.249,B71BM?,,Rambla de los Argentinos entre Armenia y M. Freire Tel. 44323259
+430,MALDONADO,Gregorio Aznares (CAC),B,E2,10.58.226.15,10.58.226.249,BG0BQ?,,
+519,MALDONADO,Punta Shopping,B,F0,10.58.240.15,10.58.240.249,,,
+520,MALDONADO,Tienda La Barra,B,F8,10.58.248.15,10.58.248.249,,,OH! La Barra
+521,MALDONADO,Cerro Pelado,B,58,10.58.88.15,10.58.88.249,,, Ruta 39 - Contenedor
+527,MALDONADO,Garage Maldonado,B,B8,10.58.184.15,10.58.184.249,,,ARAZA esquina GUAVIRA / Garage Maldonado y TOSSI
+538,MALDONADO,Planta Externa TOSSI,B,BC,10.58.188.15,10.58.188.249,,,Calle Ipiranga 
+274,MONTEVIDEO - AGUADA,Centro Comercial Aguada,V,00,10.35.0.15,10.35.0.249,,,Rango IP fija - Gateway:10.35.1.1 Mascara:255.255.248.0
+275,MONTEVIDEO - AGUADA,Centro Comercial Aguada,V,01,10.35.1.15,10.35.1.249,,,Rango SNA - Servidores de Impresión
+276,MONTEVIDEO - AGUADA,Centro Comercial Aguada,V,02,10.35.2.1,10.35.2.254,,SI,Rango DHCP -            San Martin 2675 y Vilardebo 1500
+277,MONTEVIDEO - AGUADA,Centro Comercial Aguada,V,03,10.35.3.1,10.35.3.249,,,Rango Switches - No usar
+589,MONTEVIDEO - AGUADA,Centro Comercial Aguada,V,04,10.35.4.1,10.35.4.249,,,Reservada
+590,MONTEVIDEO - AGUADA,Centro Comercial Aguada,V,05,10.35.5.1,10.35.5.249,,,IP Fijas Rangos Solicitados
+591,MONTEVIDEO - AGUADA,Centro Comercial Aguada,V,06,10.35.6.1,10.35.6.249,,SI,Rango DHCP Secundario (ADN V02x ) 10.35.6.129 a la 10.35.7.254
+592,MONTEVIDEO - AGUADA,Centro Comercial Aguada,V,07,10.35.7.1,10.35.7.249,,SI,Rango DHCP Secundario (ADN V02x ) 10.35.6.129 a la 10.35.7.254
+278,MONTEVIDEO - AGUADA,Aguada - Prevención de Fraude,V,09,10.35.9.15,10.35.9.249,,,Este rango es de ADN - San Martin P2
+279,MONTEVIDEO - AGUADA,Aguada - Planta Interna,V,11,10.35.17.15,10.35.17.249,,,Este rango lo manejan ellos / Planta Interna Digital
+326,MONTEVIDEO - PERIFERIA,Galarza,Y,01,10.38.1.15,10.38.1.249,T1LTN?,SI,Galarza 3537
+327,MONTEVIDEO - PERIFERIA,Ancel Punta Carretas,Y,03,10.38.3.15,10.38.3.249,,,
+328,MONTEVIDEO - PERIFERIA,Centro Comercial Colon,Y,08,10.38.8.15,10.38.8.249,,SI,Av. Garzon 1929 - Telecentro Colon
+329,MONTEVIDEO - PERIFERIA,Central Centenario Piso 2,Y,06,10.38.6.15,10.38.6.249,,,Piso 2 Servicios Convergentes
+330,MONTEVIDEO - PERIFERIA,Central Centenario,Y,11,10.38.17.15,10.38.17.249,,SI,Piso 1 (Area Comercial) Susviela Guarch 2964 
+350,MONTEVIDEO - PERIFERIA,Laguna - Subsuelo,Y,14,10.38.20.15,10.38.20.249,,,IP fija con emulación -  Juan Pablo Laguna 3497
+351,MONTEVIDEO - PERIFERIA,Laguna - Subsuelo,Y,15,10.38.21.15,10.38.21.249,,,IP fija sin emulación
+352,MONTEVIDEO - PERIFERIA,Laguna - Subsuelo,Y,16,10.38.22.15,10.38.22.249,,,Rango reservado
+353,MONTEVIDEO - PERIFERIA,Laguna - Subsuelo,Y,17,10.38.23.15,10.38.23.249,,SI,Rango DHCP
+354,MONTEVIDEO - PERIFERIA,Laguna - Planta Baja,Y,18,10.38.24.15,10.38.24.249,,,IP fija con emulación
+355,MONTEVIDEO - PERIFERIA,Laguna - Planta Baja,Y,19,10.38.25.15,10.38.25.249,,,IP fija sin emulación
+356,MONTEVIDEO - PERIFERIA,Laguna - Planta Baja,Y,1A,10.38.26.15,10.38.26.249,,,Rango reservado
+357,MONTEVIDEO - PERIFERIA,Laguna - Planta Baja,Y,1B,10.38.27.15,10.38.27.249,,SI,Rango DHCP
+358,MONTEVIDEO - PERIFERIA,Laguna - Piso 1,Y,1C,10.38.28.15,10.38.28.249,,,IP fija sin emulación
+359,MONTEVIDEO - PERIFERIA,Laguna - Piso 1,Y,1D,10.38.29.15,10.38.29.249,,,IP fija con emulación
+360,MONTEVIDEO - PERIFERIA,Laguna - Piso 1,Y,1E,10.38.30.15,10.38.30.249,,,Rango reservado
+361,MONTEVIDEO - PERIFERIA,Laguna - Piso 1,Y,1F,10.38.31.15,10.38.31.249,,SI,Rango DHCP
+362,MONTEVIDEO - PERIFERIA,Laguna - Piso 2,Y,20,10.38.32.15,10.38.15.249,,,IP fija con emulación
+363,MONTEVIDEO - PERIFERIA,Laguna - Piso 2,Y,21,10.38.33.15,10.38.33.249,,,IP fija sin emulación
+364,MONTEVIDEO - PERIFERIA,Laguna - Piso 2,Y,22,10.38.34.15,10.38.34.249,,,Rango reservado
+365,MONTEVIDEO - PERIFERIA,Laguna - Piso 2,Y,23,10.38.35.15,10.38.35.249,,SI,Rango DHCP
+366,MONTEVIDEO - PERIFERIA,Laguna - Piso 3,Y,24,10.38.36.15,10.38.36.249,,,IP fija sin emulación
+367,MONTEVIDEO - PERIFERIA,Laguna - Piso 3,Y,25,10.38.37.15,10.38.37.249,,,IP fija con emulación
+368,MONTEVIDEO - PERIFERIA,Laguna - Piso 3,Y,26,10.38.38.15,10.38.38.249,,,Rango reservado
+369,MONTEVIDEO - PERIFERIA,Laguna - Piso 3,Y,27,10.38.39.15,10.38.39.249,,SI,Rango DHCP
+370,MONTEVIDEO - PERIFERIA,Laguna - Piso 4,Y,28,10.38.40.15,10.38.40.249,,,IP fija con emulación
+371,MONTEVIDEO - PERIFERIA,Laguna - Piso 4,Y,29,10.38.41.15,10.38.41.249,,,IP fija sin emulación
+372,MONTEVIDEO - PERIFERIA,Laguna - Piso 4,Y,2A,10.38.42.15,10.38.42.249,,,Rango reservado
+373,MONTEVIDEO - PERIFERIA,Laguna - Piso 4,Y,2B,10.38.43.15,10.38.43.249,,SI,Rango DHCP
+306,MONTEVIDEO - CENTRO,Centro (01),X,01,10.36.1.15,10.36.1.249,,,Mercedes 876 / Mercedes 884 / Convención 1421 -  /20
+315,MONTEVIDEO - CENTRO,Centro (02),X,02,10.36.2.15,10.36.2.249,,,IP fija sin emulación (Todos los pisos el mismo Rango  /20)
+316,MONTEVIDEO - CENTRO,Centro (03),X,03,10.36.3.15,10.36.3.249,,,IP fija sin emulación     (Gateway 10.36.1.1  - 255.255.240.0)
+308,MONTEVIDEO - CENTRO,Centro (09),X,09,10.36.9.15,10.36.9.249,,,IP fija con emulación
+312,MONTEVIDEO - CENTRO,Centro (13),X,0D,10.36.13.15,10.36.13.249,,,IP fija con emulación
+317,MONTEVIDEO - CENTRO,Centro (04),X,04,10.36.4.15,10.36.4.249,,SI,Rango DHCP   -  Mercedes 876 / Mercedes 884 / Convención 1421
+318,MONTEVIDEO - CENTRO,Centro (05),X,05,10.36.5.15,10.36.5.249,,SI,Rango DHCP                (Todos los pisos el mismo Rango /20)
+318,MONTEVIDEO - CENTRO,Centro (06),X,05,10.36.6.15,10.36.5.254,,SI,Rango DHCP
+320,MONTEVIDEO - CENTRO,Centro (15),X,0F,10.36.15.15,10.36.15.249,,,Rango reservado
+321,MONTEVIDEO - CENTRO,Edificio Baalbek P1,X,11,10.36.17.15,10.36.17.249,,SI,1er piso RONDEAU 1921 
+322,MONTEVIDEO - CENTRO,Edificio Baalbek P2,X,12,10.36.18.15,10.36.18.249,,SI,2do piso RONDEAU 1921
+323,MONTEVIDEO - CENTRO,Edificio Baalbek P3,X,13,10.36.19.15,10.36.19.249,,SI,3er piso RONDEAU 1921
+324,MONTEVIDEO - CENTRO,Edificio Baalbek P4,X,14,10.36.20.15,10.36.20.249,,SI,4to piso RONDEAU 1921
+325,MONTEVIDEO - CENTRO,Edificio Baalbek P5,X,15,10.36.21.15,10.36.21.249,,SI,5to piso RONDEAU 1921
+335,MONTEVIDEO - CENTRO,Edificio Baalbek P6,X,16,10.36.22.15,10.36.22.249,,SI,6to piso RONDEAU 1921
+336,MONTEVIDEO - CENTRO,Edificio Baalbek P7,X,17,10.36.23.15,10.36.23.249,,SI,7mo piso RONDEAU 1921
+571,MONTEVIDEO - PERIFERIA,Anexo Venezuela,Y,88,10.38.136.32,10.38.136.254,,,Venezuela 1112 // IP Fija con emulación
+572,MONTEVIDEO - PERIFERIA,Anexo Venezuela,Y,89,10.38.137.15,10.38.137.249,,,IP fija sin emulación
+573,MONTEVIDEO - PERIFERIA,Anexo Venezuela,Y,8A,10.38.138.1,10.38.138.254,,SI,Rango DHCP
+574,MONTEVIDEO - PERIFERIA,Anexo Venezuela,Y,8B,10.38.139.1,10.38.139.254,,SI,Rango DHCP
+280,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 01,W,A0,10.33.160.15,10.33.160.249,,,IP fija con emulación
+281,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 01,W,A1,10.33.161.15,10.33.161.249,,,IP fija sin emulación
+282,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 01,W,A2,10.33.162.15,10.33.162.249,,,Rango reservado
+283,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 01,W,A3,10.33.163.15,10.33.163.249,,SI,Rango DHCP
+284,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 02,W,A4,10.33.164.15,10.33.164.249,,,IP fija con emulación
+285,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 02,W,A5,10.33.165.15,10.33.165.249,,,IP fija sin emulación
+286,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 02,W,A6,10.33.166.15,10.33.166.249,,,Rango reservado
+287,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 02,W,A7,10.33.167.15,10.33.167.249,,SI,Rango DHCP
+288,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 03,W,A8,10.33.168.15,10.33.168.249,,,IP fija con emulación
+289,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 03,W,A9,10.33.169.15,10.33.169.249,,,IP fija sin emulación
+290,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 03,W,AA,10.33.170.15,10.33.170.249,,,Rango reservado
+291,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 03,W,AB,10.33.171.15,10.33.171.249,,SI,Rango DHCP
+292,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 04,W,AC,10.33.172.15,10.33.172.249,,,IP fija con emulación
+293,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 04,W,AD,10.33.173.15,10.33.173.249,,,IP fija sin emulación
+294,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 04,W,AE,10.33.174.15,10.33.174.249,,,Rango reservado
+295,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 04,W,AF,10.33.175.15,10.33.175.249,,SI,Rango DHCP
+296,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 05,W,B0,10.33.176.15,10.33.176.249,,,IP fija con emulación
+297,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 05,W,B1,10.33.177.15,10.33.177.249,,,IP fija sin emulación
+298,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 05,W,B2,10.33.178.15.,10.33.178.249,,,Rango reservado
+299,MONTEVIDEO - Ed CLIENTES,Edificio Clientes - Piso 05,W,B3,10.33.179.15,10.33.179.249,,SI,Rango DHCP
+300,MONTEVIDEO - Ed CLIENTES,Anexos,W,CB,10.33.203.15,10.33.203.249,,,DHCP Anexos : Areas Técnicas ; Nivel 6.2 ; Cultural - ; Estacionamiento ; Guardería
+382,MONTEVIDEO - Ed CLIENTES,Anexos,W,C9,10.33.201.15,10.33.201.249,,,IP fija sin emulación (gateway 10.33.200.1)
+133,MONTEVIDEO - PERIFERIA,Casona Maldonado,T,04,10.37.4.15,10.37.4.249,SS1SX?,,Maldonado 1331 esquina Ejido
+134,MONTEVIDEO - PERIFERIA,Centro Dist. Teleg. Barbato,T,11,10.37.17.15,10.37.17.249,,SI,German Barbato 1410
+135,MONTEVIDEO - PERIFERIA,Union,T,21,10.37.33.15,10.37.33.249,,,Pascual Paladino 2503 Central Union
+136,MONTEVIDEO - PERIFERIA,Cerrito,T,30,10.37.48.15,10.37.48.249,,SI,Rango DHCP Primario - (Pool 10.37.48.64 - 254)
+136,MONTEVIDEO - PERIFERIA,Cerrito,T,31,10.37.49.15,10.37.49.249,,,IP fija con emulación
+563,MONTEVIDEO - PERIFERIA,Cerrito,T,32,10.37.50.15,10.37.50.249,,,IP fija sin emulación
+564,MONTEVIDEO - PERIFERIA,Cerrito,T,33,10.37.51.15,10.37.51.249,,SI,Rango DHCP Secundario
+137,MONTEVIDEO - PERIFERIA,Pocitos,T,51,10.37.81.15,10.37.81.249,,SI,Pocitos - Massini 3012 / Datacenter
+534,MONTEVIDEO - PERIFERIA,Datacenter Pocitos,Y,78,10.38.120.15,10.38.120.249,,,
+138,MONTEVIDEO - PERIFERIA,Central Carrasco,T,52,10.37.82.15,10.37.82.249,,,Yamandú Rodriguez 1581
+139,MONTEVIDEO - PERIFERIA,Centro Comercial Punta Carretas,T,61,10.37.97.15,10.37.97.249,,SI,Garcia Cortinas 2404 (Punta Carretas) / CASI
+579,MONTEVIDEO - PERIFERIA,Tienda Punta Carretas,T,15,10.37.21.15,10.37.21.249,,SI,Shopping Punta Carretas Local N3-13
+140,MONTEVIDEO - PERIFERIA,Central Cordón,T,70,10.37.112.15,10.37.112.249,SC0SC?,,
+141,MONTEVIDEO - PERIFERIA,Telecentro Santiago Vazquez,T,71,10.37.113.15,10.37.113.249,,,
+142,MONTEVIDEO - PERIFERIA,Centro Comercial Carrasco,T,72,10.37.114.15,10.37.114.249,,,Arocena y Otero (Telecentro Carrasco) AHORA ES STELLA PARK
+143,MONTEVIDEO - PERIFERIA,Telecentro Tres Cruces,T,73,10.37.115.15,10.37.115.249,,SI,
+144,MONTEVIDEO - PERIFERIA,Telecentro Sayago,T,75,10.37.117.15,10.37.117.249,,SI,Ariel 4914
+145,MONTEVIDEO - PERIFERIA,Centro Comercial Plaza,T,76,10.37.118.15,10.37.118.249,,SI,San José 1101 - (Telecentro Plaza)
+146,MONTEVIDEO - PERIFERIA,Centro Comercial Unión,T,77,10.37.119.15,10.37.119.249,,SI,8 de octubre 3619 (Telecentro Unión)
+147,MONTEVIDEO - PERIFERIA,Telecentro Hospital de Clinicas,T,78,10.37.120.15,10.37.120.249,,SI,
+148,MONTEVIDEO - PERIFERIA,Telecentro Paso de la Arena,T,79,10.37.121.15,10.37.121.249,,,Tomkinson 2352 esq Batlle Berres
+149,MONTEVIDEO - PERIFERIA,Costera Pta Carretas,T,7A,10.37.122.15,10.37.122.249,,,Faro Punta Carretas / Punta Brava - RAMBLA MAHATMA GANDHI Y CNO AL FARO 
+150,MONTEVIDEO - PERIFERIA,Telecentro Piedras Blancas,T,7B,10.37.123.15,10.37.123.249,,,
+151,MONTEVIDEO - PERIFERIA,Depósito Bella Vista,T,7C,10.37.124.15,10.37.124.249,,,Rambla Baltasar Brum 2971
+152,MONTEVIDEO - PERIFERIA,SEMU - ANTEL,T,7D,10.37.125.15,10.37.125.249,,,
+153,MONTEVIDEO - PERIFERIA,Unión Distribución de Facturas,T,7F,10.37.127.15,10.37.127.249,,,8 de octubre 4100 (telegrafo paladino)
+154,MONTEVIDEO - PERIFERIA,Costera Parque Lecocq,T,80,10.37.128.15,10.37.128.249,,,
+155,MONTEVIDEO - PERIFERIA,Malvin,T,81,10.37.129.15,10.37.129.249,,,Asamblea 4582
+156,MONTEVIDEO - PERIFERIA,Centro Dist. Teleg. Paso Molino,T,91,10.37.145.15,10.37.145.249,,SI,Emilio Romero 134/ India Muerta 
+157,MONTEVIDEO - PERIFERIA,Manga,T,A1,10.37.161.15,10.37.161.249,,,CARLOS A.LOPEZ 4240
+158,MONTEVIDEO - PERIFERIA,Colon,T,C1,10.37.193.15,10.37.193.249,,,Calderon de la Barca
+499,MONTEVIDEO - PERIFERIA,Red de Accesa,T,D0,10.37.208.15,10.37.208.249,,,Red 10.37.208/22  -  Aguada / Punta Carretas
+159,MONTEVIDEO - PERIFERIA,Red de Accesa,T,D1,10.37.209.1,10.37.209.254,,,Red 10.37.208/22  -  Aguada / Punta Carretas
+500,MONTEVIDEO - PERIFERIA,Red de Accesa,T,D2,10.37.210.1,10.37.210.254,,,Red 10.37.208/22  -  Aguada / Punta Carretas
+501,MONTEVIDEO - PERIFERIA,Red de Accesa,T,D3,10.37.211.1,10.37.211.254,,,Red 10.37.208/22  -  Aguada / Punta Carretas
+,MONTEVIDEO - PERIFERIA,Red de Accesa,,,10.37.218.1,10.37.218.254,,,Red Accesa      Aguada / Ciudad Vieja / Punta Carretas
+,MONTEVIDEO - PERIFERIA,Red de Accesa,,,10.44.226.1,10.44.226.254,,,Red Accesa  Castillos/ Paysandu / Artigas
+,MONTEVIDEO - PERIFERIA,Red de Accesa,,,10.44.227.1,10.44.226.254,,,Red Accesa  Castillos/ Paysandu / Artigas
+,MONTEVIDEO - PERIFERIA,Red de Accesa,,,10.44.228.1,10.44.226.254,,,Red Accesa  Castillos/ Paysandu / Artigas
+502,MONTEVIDEO - PERIFERIA,Central Punta Carretas,T,62,10.37.98.15,10.37.98.249,,,Regional Punta Carretas - Luis de la Torre  634
+160,MONTEVIDEO - PERIFERIA,Cerro,T,E1,10.37.225.15,10.37.225.249,TH0TH?,,Grecia 3643 entre Ecuador y Prusia
+161,MONTEVIDEO - PERIFERIA,Centro Comercial Cerro,T,E2,10.37.226.15,10.37.226.249,TH1TJ?,SI,Telecentro Cerro -  Grecia 4259 (ex Japon 1709)
+162,MONTEVIDEO - PERIFERIA,Plaza Cagancha,T,F8,10.37.248.15,10.37.248.249,,,IP fija con emulación
+163,MONTEVIDEO - PERIFERIA,Plaza Cagancha,T,F9,10.37.249.15,10.37.249.249,,,IP fija sin emulación
+164,MONTEVIDEO - PERIFERIA,Plaza Cagancha,T,FA,10.37.250.15,10.37.250.249,,,Rango reservado
+165,MONTEVIDEO - PERIFERIA,Plaza Cagancha,T,FB,10.37.251.15,10.37.251.249,,,Rango DHCP
+377,MONTEVIDEO - PERIFERIA,Centro Comercial Ciudad Vieja,T,00,10.37.0.15,10.37.0.249,,,IP Fija
+132,MONTEVIDEO - PERIFERIA,Centro Comercial Ciudad Vieja,T,01,10.37.1.15,10.37.1.249,,SI,DHCP - Treinta y Tres 1416 y 1418 // para HG asignar de este rango
+303,MONTEVIDEO - PERIFERIA,Centro Comercial Ciudad Vieja,T,02,10.37.2.15,10.37.2.254,,SI,DHCP
+304,MONTEVIDEO - PERIFERIA,Centro Comercial Ciudad Vieja,T,03,10.37.3.15,10.37.3.249,,SI,DHCP
+334,MONTEVIDEO - PERIFERIA,Pocitos - Libertad,T,13,10.37.19.15,10.37.19.249,,,IP fija con emulación - 3er Piso - Calle Libertad 2801 o treinta y tres 1418
+337,MONTEVIDEO - PERIFERIA,Malvin (2),T,82,10.37.130.15,10.37.130.249,,,Asamblea 4582 P1 (Red de Spremola)
+378,MONTEVIDEO - PERIFERIA,Aeropuerto Internacional de Carrasco,T,B1,10.37.177.15,10.37.177.249,,,PB y P1
+383,MONTEVIDEO - PERIFERIA,Central Palacio,T,64,10.37.100.15,10.37.100.249,,,(ex-Contenedor Palacio) Colombia 1243  
+384,MONTEVIDEO - PERIFERIA,Calle Canaro (Ex Pocitos),T,50,10.37.80.15,10.37.80.249,,,Francisco Canaro 2226
+395,MONTEVIDEO - PERIFERIA,Carrasco (Stella Park),T,54,10.37.84.15,10.37.84.249,,,IP fija con emulación
+396,MONTEVIDEO - PERIFERIA,Carrasco (Stella Park),T,55,10.37.85.15,10.37.85.249,,,IP fija sin emulación
+397,MONTEVIDEO - PERIFERIA,Carrasco (Stella Park),T,56,10.37.86.15,10.37.86.249,,,Rango reservado
+398,MONTEVIDEO - PERIFERIA,Carrasco (Stella Park),T,57,10.37.87.15,10.37.87.249,,SI,Rango DHCP
+400,MONTEVIDEO - PERIFERIA,Local Antel Integra - Centro Reciclaje,T,6E,10.37.110.15,10.37.110.249,,,Goes 2175 esq. Joaquín Requena (Tel. 24015525)
+470,MONTEVIDEO - PERIFERIA,Parque Rodó - Distribuidor de Cobre,T,92,10.37.146.15,10.37.146.249,,,Lauro Muller 1928   
+471,MONTEVIDEO - PERIFERIA,Telecentro Rural del Prado,T,5A,10.37.90.15,10.37.90.249,,,Av. Lucas Obes 1011 entre Buschental y 19 de abril - Dámaso Antonio Larrañaga Padrón A009
+472,MONTEVIDEO - PERIFERIA,Telecentro MAM,T,3C,10.37.60.15,10.37.60.249,TA0TQ?,SI,José L Terra 2220 Local F96
+575,MONTEVIDEO - PERIFERIA,Antel Arena,Y,30,10.38.48.15,10.38.48.249,TU0TC?,,San Gabriel 4004  padrón 72476 / IP fija con emulación
+576,MONTEVIDEO - PERIFERIA,Antel Arena,Y,31,10.38.49.15,10.38.49.249,,,IP fija sin emulación
+577,MONTEVIDEO - PERIFERIA,Antel Arena,Y,32,10.38.50.15,10.38.50.249,,SI,Rango DHCP
+578,MONTEVIDEO - PERIFERIA,Antel Arena,Y,33,10.38.51.15,10.38.51.249,,,Rango reservado
+475,MONTEVIDEO - PERIFERIA,Local Zonamerica,T,40,10.37.64.15,10.37.64.249,,SI,Ruta 8 Km 17.500
+498,MONTEVIDEO - PERIFERIA,Nuevo Centro Shopping,T,45,10.37.69.15,10.37.69.249,TH0TQ?,SI,Luis Alberto de Herrera y Boulevard Artigas
+504,MONTEVIDEO - PERIFERIA,Central Cerrito,T,A8,10.37.168.15,10.37.168.249,,,Juan Acosta 4380 esq. Sorata
+506,MONTEVIDEO - PERIFERIA,Kibon,T,A4,10.37.164.15,10.37.164.249,,,Rambla Pte. Charles De Gaulle s/n Se puso Servicio de Eventos 10.101.3.1
+507,MONTEVIDEO - PERIFERIA,Tienda Unión,T,AC,10.37.172.15,10.37.172.249,,SI, 8 de Octubre 3601 esquina Pernas 
+516,MONTEVIDEO - PERIFERIA,Terminal Colon,T,B0,10.37.176.15,10.37.176.249,,,
+523,MONTEVIDEO - PERIFERIA,Obrador Antel Arena,T,B4,10.37.180.15,10.37.180.249,,,Calle San Gabriel S/N - Oficinas de Antel en el obrador de la construcción de Antel Arena
+530,MONTEVIDEO - PERIFERIA,Central Euskalerria,T,B8,10.37.184.15,10.37.184.249,,,Hipolito Irigoyen 2339 
+526,MONTEVIDEO - PERIFERIA,Impresión y Ensobrado - Paso Molino,T,94,10.37.148.15,10.37.148.249,,,Emilio Romero 134 - Sala de Ensobrado
+532,MONTEVIDEO - PERIFERIA,Terminal Belloni,T,BC,10.37.188.15,10.37.188.249,,SI,Belloni 2881 Local 104 
+533,MONTEVIDEO - PERIFERIA,Central Ituzaingó,T,BC,10.37.220.15,10.37.220.249,,,Rafael 3475
+535,MONTEVIDEO - PERIFERIA,Central Sayago,T,E4,10.37.228.15,10.37.228.249,,,Elías Regules 4711
+536,MONTEVIDEO - PERIFERIA,Central Lezica,T,E8,10.37.232.15,10.37.232.249,,,Niña 1798
+539,MONTEVIDEO - PERIFERIA,Central Atahualpa,T,F0,10.37.240.15,10.37.240.249,,,Franciso Bicudo 3810
+541,MONTEVIDEO - PERIFERIA,Central Paso Carrasco,T,F4,10.37.244.15,10.37.244.249,,,Camino Carrasco s/n esq Calcagno 
+600,MONTEVIDEO - PERIFERIA,Depósito Cavia,T,EC,10.37.236.15,10.37.236.249,,,Cavia 2664
+608,MONTEVIDEO - PERIFERIA,Central Raissignier,Y,68,10.38.104.15,10.38.104.249,,,Juan J. Raissignier 2520
+434,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Planta Baja,Y,3C,10.38.60.15,10.38.60.249,,,IP fija con emulación
+435,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Planta Baja,Y,3D,10.38.61.15,10.38.61.249,,,IP fija sin emulación
+436,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Planta Baja,Y,3E,10.38.62.15,10.38.62.249,,,Rango reservado
+437,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Planta Baja,Y,3F,10.38.63.15,10.38.63.249,,,Rango DHCP
+438,MONTEVIDEO - PERIFERIA,Edificio Uruguay,Y,40,10.38.64.15,10.38.64.15,T91TK?,,IP fija con emulación
+439,MONTEVIDEO - PERIFERIA,Edificio Uruguay,Y,41,10.38.65.15,10.38.65.249,,,IP fija sin emulación
+440,MONTEVIDEO - PERIFERIA,Edificio Uruguay,Y,42,10.38.66.15,10.38.66.249,,,Rango reservado
+441,MONTEVIDEO - PERIFERIA,Edificio Uruguay,Y,43,10.38.67.5,10.38.67.249,,SI,Rango DHCP ( Edificio Candeau)  (Uruguay 1177)
+442,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Piso 2,Y,44,10.38.68.15,10.38.68.249,,,IP fija con emulación
+443,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Piso 2,Y,45,10.38.69.15,10.38.69.249,,,IP fija sin emulación
+444,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Piso 2,Y,46,10.38.70.15,10.38.70.249,,,Rango reservado
+445,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Piso 2,Y,47,10.38.71.15,10.38.71.249,,,Rango DHCP
+446,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Piso 3,Y,48,10.38.72.15,10.38.72.249,,,IP fija con emulación
+447,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Piso 3,Y,49,10.38.73.15,10.38.73.249,,,IP fija sin emulación
+448,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Piso 3,Y,4A,10.38.74.15,10.38.74.249,,,Rango reservado
+449,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Piso 3,Y,4B,10.38.75.15,10.38.75.249,,,Rango DHCP
+450,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Piso 4,Y,4C,10.38.76.15,10.38.76.249,,,IP fija con emulación
+451,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Piso 4,Y,4D,10.38.77.15,10.38.77.249,,,IP fija sin emulación
+452,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Piso 4,Y,4E,10.38.78.15,10.38.78.249,,,Rango reservado
+453,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Piso 4,Y,4F,10.38.79.15,10.38.79.249,,,Rango DHCP
+454,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Piso 5,Y,50,10.38.80.15,10.38.80.249,,,IP fija con emulación
+455,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Piso 5,Y,51,10.38.81.15,10.38.81.249,,,IP fija sin emulación
+456,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Piso 5,Y,52,10.38.82.15,10.38.82.249,,,Rango reservado
+457,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Piso 5,Y,53,10.38.83.15,10.38.83.249,,,Rango DHCP
+509,MONTEVIDEO - PERIFERIA,Montevideo Shopping,Y,58,10.38.88.15,10.38.88.249,,,IP fija - Tienda y Local Montevideo Shopping
+513,MONTEVIDEO - PERIFERIA,Montevideo Shopping,Y,59,10.38.89.15,10.38.89.50,,,IP fija con emulación
+514,MONTEVIDEO - PERIFERIA,Montevideo Shopping,Y,5A,10.38.90.15,10.38.90.249,,,Rango reservado
+515,MONTEVIDEO - PERIFERIA,Montevideo Shopping,Y,5B,10.38.91.15,10.38.91.249,,SI,Rango DHCP
+512,MONTEVIDEO - PERIFERIA,Montevideo Shopping (Teléfonos IP),Y,5C,10.38.92.15,10.38.92.15,,SI,Telefonos IP - Tienda y Local Montevideo Shopping
+528,MONTEVIDEO - PERIFERIA,LATU - Edificio CDC,Y,70,10.38.112.15,10.38.112.249,,,Av. Italia 6201 - Centro de Desarrollo de Contenidos y Laboratorio de TV Digital
+540,MONTEVIDEO - PERIFERIA,Torre de los Profesionales,Y,74,10.38.116.15,10.38.116.249,,,Colonia esq. Yaguarón - oficina 807 
+588,MONTEVIDEO - PERIFERIA,Tres Cruces Tienda,Y,61,10.38.97.15,10.38.97.249,,SI,Shopping Tres Cruces Nivel 2 Local 210
+606,MONTEVIDEO - PERIFERIA,Plaza Italia,Y,7C,10.38.124.15,10.38.124.249,,,Tienda Plaza Italia Shopping - Avda Italia 4250
+109,MONTEVIDEO - SEDE,Centro Comercial Cordón - Subsuelo,S,09,10.32.9.15,10.32.9.249,,,IP fija sin emulación
+110,MONTEVIDEO - SEDE,Centro Comercial Cordón - Subsuelo,S,0A,10.32.10.15,10.32.10.249,,,Rango reservado
+111,MONTEVIDEO - SEDE,Centro Comercial Cordón - Subsuelo,S,0B,10.32.11.15,10.32.11.249,,,Rango DHCP
+112,MONTEVIDEO - SEDE,Centro Comercial Cordón - Planta Baja,S,0C,10.32.12.15,10.32.12.249,S00S1?,,IP fija con emulación
+113,MONTEVIDEO - SEDE,Centro Comercial Cordón - Planta Baja,S,0D,10.32.13.15,10.32.13.249,,,IP fija sin emulación
+114,MONTEVIDEO - SEDE,Centro Comercial Cordón - Planta Baja,S,0E,10.32.14.15,10.32.14.249,,,Rango reservado
+115,MONTEVIDEO - SEDE,Centro Comercial Cordón - Planta Baja,S,0F,10.32.15.15,10.32.15.249,,,Rango DHCP
+116,MONTEVIDEO - SEDE,Centro Comercial Cordón - Piso 1,S,10,10.32.16.15,10.32.16.249,S10S3?,,IP fija con emulación
+117,MONTEVIDEO - SEDE,Centro Comercial Cordón - Piso 1,S,11,10.32.17.15,10.32.17.249,,,IP fija sin emulación
+118,MONTEVIDEO - SEDE,Centro Comercial Cordón - Piso 1,S,12,10.32.18.15,10.32.18.249,,,Rango reservado
+119,MONTEVIDEO - SEDE,Centro Comercial Cordón - Piso 1,S,13,10.32.19.15,10.32.19.249,,,Rango DHCP
+120,MONTEVIDEO - SEDE,Centro Comercial Cordón - Piso 2,S,14,10.32.20.15,10.32.20.249,S20S2?,,IP fija con emulación
+121,MONTEVIDEO - SEDE,Centro Comercial Cordón - Piso 2,S,15,10.32.21.15,10.32.21.249,,,IP fija sin emulación
+122,MONTEVIDEO - SEDE,Centro Comercial Cordón - Piso 2,S,16,10.32.22.15,10.32.22.249,,,Rango reservado
+123,MONTEVIDEO - SEDE,Centro Comercial Cordón - Piso 2,S,17,10.32.23.15,10.32.23.249,,,Rango DHCP
+124,MONTEVIDEO - SEDE,Centro Comercial Cordón - Piso 3,S,18,10.32.24.15,10.32.24.249,,,IP fija con emulación
+125,MONTEVIDEO - SEDE,Centro Comercial Cordón - Piso 3,S,19,10.32.25.15,10.32.25.249,,,IP fija sin emulación
+126,MONTEVIDEO - SEDE,Centro Comercial Cordón - Piso 3,S,1A,10.32.26.15,10.32.26.249,,,Rango reservado
+127,MONTEVIDEO - SEDE,Centro Comercial Cordón - Piso 3,S,1B,10.32.27.15,10.32.27.249,,,Rango DHCP
+128,MONTEVIDEO - SEDE,Centro Comercial Cordón - Piso 4,S,1C,10.32.28.15,10.32.28.249,,,IP fija con emulación
+129,MONTEVIDEO - SEDE,Centro Comercial Cordón - Piso 4,S,1D,10.32.29.15,10.32.29.249,,,IP fija sin emulación
+130,MONTEVIDEO - SEDE,Centro Comercial Cordón - Piso 4,S,1E,10.32.30.15,10.32.30.249,,,Rango reservado
+131,MONTEVIDEO - SEDE,Centro Comercial Cordón - Piso 4,S,1F,10.32.31.15,10.32.31.249,,,Rango DHCP
+528,MONTEVIDEO - PERIFERIA,Edificio Uruguay - Telefonia,,,10.35.200.1,30.35.204.254,,,Provisorio Telefonia
+529,MONTEVIDEO - SEDE,Centro Comercial Cordón - Laboratorio,V,F1,10.35.241.15,10.35.241.249,,,Servicio 4Mb para pruebas Telefonia IP
+405,MONTEVIDEO - SEDE,Servicios Auxiliares en Datacenters,S,28,10.32.40.15,10.32.40.249,,,Datacenters de Sede y CPD1
+406,MONTEVIDEO - SEDE,Servicios Auxiliares en Datacenters,S,29,10.32.41.15,10.32.41.249,,,Datacenters de Sede y CPD1
+407,MONTEVIDEO - SEDE,Servicios Auxiliares en Datacenters,S,2A,10.32.42.15,10.32.42.249,,,Datacenters de Sede y CPD1
+408,MONTEVIDEO - SEDE,Servicios Auxiliares en Datacenters,S,2B,10.32.43.15,10.32.43.249,,,Datacenters de Sede y CPD1
+522,MONTEVIDEO - SEDE,Valor Agregado y Contenido,S,34,10.32.52.15,10.32.52.249,,,Fernandez Crespo 1940
+166,MONTEVIDEO - TORRE,Torre - Piso 01,U,04,10.33.4.15,10.33.4.249,,,IP fija con emulación
+167,MONTEVIDEO - TORRE,Torre - Piso 01,U,05,10.33.5.15,10.33.5.249,,,IP fija sin emulación
+168,MONTEVIDEO - TORRE,Torre - Piso 01,U,06,10.33.6.15,10.33.6.249,,,Rango reservado
+169,MONTEVIDEO - TORRE,Torre - Piso 01,U,07,10.33.7.15,10.33.7.249,,,Rango DHCP
+170,MONTEVIDEO - TORRE,Torre - Piso 02,U,08,10.33.8.15,10.33.8.249,,,IP fija con emulación
+171,MONTEVIDEO - TORRE,Torre - Piso 02,U,09,10.33.9.15,10.33.9.249,,,IP fija sin emulación
+172,MONTEVIDEO - TORRE,Torre - Piso 02,U,0A,10.33.10.15,10.33.10.249,,,Rango reservado
+173,MONTEVIDEO - TORRE,Torre - Piso 02,U,0B,10.33.11.15,10.33.11.249,,,Rango DHCP
+174,MONTEVIDEO - TORRE,Torre - Piso 03,U,0C,10.33.12.15,10.33.12.249,,,IP fija con emulación
+175,MONTEVIDEO - TORRE,Torre - Piso 03,U,0D,10.33.13.15,10.33.13.249,,,IP fija sin emulación
+176,MONTEVIDEO - TORRE,Torre - Piso 03,U,0E,10.33.14.15,10.33.14.249,,,Rango reservado
+177,MONTEVIDEO - TORRE,Torre - Piso 03,U,0F,10.33.15.15,10.33.15.249,,,Rango DHCP
+178,MONTEVIDEO - TORRE,Torre - Piso 04,U,10,10.33.16.15,10.33.16.249,,,IP fija con emulación
+179,MONTEVIDEO - TORRE,Torre - Piso 04,U,11,10.33.17.15,10.33.17.249,,,IP fija sin emulación
+180,MONTEVIDEO - TORRE,Torre - Piso 04,U,12,10.33.18.15,10.33.18.249,,,Rango reservado
+181,MONTEVIDEO - TORRE,Torre - Piso 04,U,13,10.33.19.15,10.33.19.249,,,Rango DHCP
+182,MONTEVIDEO - TORRE,Torre - Piso 05,U,14,10.33.20.15,10.33.20.249,,,IP fija con emulación
+183,MONTEVIDEO - TORRE,Torre - Piso 05,U,15,10.33.21.15,10.33.21.249,,,IP fija sin emulación
+184,MONTEVIDEO - TORRE,Torre - Piso 05,U,16,10.33.22.15,10.33.22.249,,,Rango reservado
+185,MONTEVIDEO - TORRE,Torre - Piso 05,U,17,10.33.23.15,10.33.23.249,,,Rango DHCP
+186,MONTEVIDEO - TORRE,Torre - Piso 06,U,18,10.33.24.15,10.33.24.249,,,IP fija sin emulación
+187,MONTEVIDEO - TORRE,Torre - Piso 06,U,19,10.33.25.15,10.33.25.249,,,IP fija con emulación
+188,MONTEVIDEO - TORRE,Torre - Piso 06,U,1A,10.33.26.15,10.33.26.249,,,Rango reservado
+189,MONTEVIDEO - TORRE,Torre - Piso 06,U,1B,10.33.27.15,10.33.27.249,,,Rango DHCP
+190,MONTEVIDEO - TORRE,Torre - Piso 07,U,1C,10.33.28.15,10.33.28.249,,,IP fija con emulación
+191,MONTEVIDEO - TORRE,Torre - Piso 07,U,1D,10.33.29.15,10.33.29.249,,,IP fija sin emulación
+192,MONTEVIDEO - TORRE,Torre - Piso 07,U,1E,10.33.30.15,10.33.30.249,,,Rango reservado
+193,MONTEVIDEO - TORRE,Torre - Piso 07,U,1F,10.33.31.15,10.33.31.249,,,Rango DHCP
+194,MONTEVIDEO - TORRE,Torre - Piso 08,U,20,10.33.32.15,10.33.32.249,,,IP fija con emulación
+195,MONTEVIDEO - TORRE,Torre - Piso 08,U,21,10.33.33.15,10.33.33.249,,,IP fija sin emulación
+196,MONTEVIDEO - TORRE,Torre - Piso 08,U,22,10.33.34.15,10.33.34.249,,,Rango reservado
+197,MONTEVIDEO - TORRE,Torre - Piso 08,U,23,10.33.35.15,10.33.35.249,,,Rango DHCP
+198,MONTEVIDEO - TORRE,Torre - Piso 09,U,24,10.33.36.15,10.33.36.249,,,IP fija con emulación
+199,MONTEVIDEO - TORRE,Torre - Piso 09,U,25,10.33.37.15,10.33.37.249,,,IP fija sin emulación
+200,MONTEVIDEO - TORRE,Torre - Piso 09,U,26,10.33.38.15,10.33.38.249,,,Rango reservado
+201,MONTEVIDEO - TORRE,Torre - Piso 09,U,27,10.33.39.15,10.33.39.249,,,Rango DHCP
+202,MONTEVIDEO - TORRE,Torre - Piso 10,U,28,10.33.40.15,10.33.40.249,,,IP fija con emulación
+203,MONTEVIDEO - TORRE,Torre - Piso 10,U,29,10.33.41.15,10.33.41.249,,,IP fija sin emulación
+204,MONTEVIDEO - TORRE,Torre - Piso 10,U,2A,10.33.42.15,10.33.42.249,,,Rango reservado
+205,MONTEVIDEO - TORRE,Torre - Piso 10,U,2B,10.33.43.15,10.33.43.249,,,Rango DHCP
+206,MONTEVIDEO - TORRE,Torre - Piso 11,U,2C,10.33.44.15,10.33.44.249,,,IP fija con emulación
+207,MONTEVIDEO - TORRE,Torre - Piso 11,U,2D,10.33.45.15,10.33.45.249,,,IP fija sin emulación
+208,MONTEVIDEO - TORRE,Torre - Piso 11,U,2E,10.33.46.15,10.33.46.249,,,Rango reservado
+209,MONTEVIDEO - TORRE,Torre - Piso 11,U,2F,10.33.47.15,10.33.47.249,,,Rango DHCP
+210,MONTEVIDEO - TORRE,Torre - Piso 12,U,30,10.33.48.15,10.33.48.249,,,IP fija con emulación
+211,MONTEVIDEO - TORRE,Torre - Piso 12,U,31,10.33.49.15,10.33.49.249,,,IP fija sin emulación
+212,MONTEVIDEO - TORRE,Torre - Piso 12,U,32,10.33.50.15,10.33.50.249,,,Rango reservado
+213,MONTEVIDEO - TORRE,Torre - Piso 12,U,33,10.33.51.15,10.33.51.249,,,Rango DHCP
+214,MONTEVIDEO - TORRE,Torre - Piso 13,U,34,10.33.52.15,10.33.52.249,,,IP fija con emulación
+215,MONTEVIDEO - TORRE,Torre - Piso 13,U,35,10.33.53.15,10.33.53.249,,,IP fija sin emulación
+216,MONTEVIDEO - TORRE,Torre - Piso 13,U,36,10.33.54.15,10.33.54.249,,,Rango reservado
+217,MONTEVIDEO - TORRE,Torre - Piso 13,U,37,10.33.55.15,10.33.55.249,,,Rango DHCP
+218,MONTEVIDEO - TORRE,Torre - Piso 14,U,38,10.33.56.15,10.33.56.249,,,IP fija con emulación
+219,MONTEVIDEO - TORRE,Torre - Piso 14,U,39,10.33.57.15,10.33.57.249,,,IP fija sin emulación
+220,MONTEVIDEO - TORRE,Torre - Piso 14,U,3A,10.33.58.15,10.33.58.249,,,Rango reservado
+221,MONTEVIDEO - TORRE,Torre - Piso 14,U,3B,10.33.59.15,10.33.59.249,,,Rango DHCP
+222,MONTEVIDEO - TORRE,Torre - Piso 15,U,3C,10.33.60.15,10.33.60.249,,,IP fija sin emulación
+223,MONTEVIDEO - TORRE,Torre - Piso 15,U,3D,10.33.61.15,10.33.61.249,,,IP fija con emulación
+224,MONTEVIDEO - TORRE,Torre - Piso 15,U,3E,10.33.62.15,10.33.62.249,,,Rango reservado
+225,MONTEVIDEO - TORRE,Torre - Piso 15,U,3F,10.33.63.15,10.33.63.249,,,Rango DHCP
+226,MONTEVIDEO - TORRE,Torre - Piso 16,U,40,10.33.64.15,10.33.64.249,,,IP fija con emulación
+227,MONTEVIDEO - TORRE,Torre - Piso 16,U,41,10.33.65.15,10.33.65.249,,,IP fija sin emulación
+228,MONTEVIDEO - TORRE,Torre - Piso 16,U,42,10.33.66.15,10.33.66.249,,,Rango reservado
+229,MONTEVIDEO - TORRE,Torre - Piso 16,U,43,10.33.67.15,10.33.67.249,,,Rango DHCP
+230,MONTEVIDEO - TORRE,Torre - Piso 17,U,44,10.33.68.15,10.33.68.249,,,IP fija con emulación
+231,MONTEVIDEO - TORRE,Torre - Piso 17,U,45,10.33.69.15,10.33.69.249,,,IP fija sin emulación
+232,MONTEVIDEO - TORRE,Torre - Piso 17,U,46,10.33.70.15,10.33.70.249,,,Rango reservado
+233,MONTEVIDEO - TORRE,Torre - Piso 17,U,47,10.33.71.15,10.33.71.249,,,Rango DHCP
+234,MONTEVIDEO - TORRE,Torre - Piso 18,U,48,10.33.72.15,10.33.72.249,,,IP fija con emulación
+235,MONTEVIDEO - TORRE,Torre - Piso 18,U,49,10.33.73.15,10.33.73.249,,,IP fija sin emulación
+236,MONTEVIDEO - TORRE,Torre - Piso 18,U,4A,10.33.74.15,10.33.74.249,,,Rango reservado
+237,MONTEVIDEO - TORRE,Torre - Piso 18,U,4B,10.33.75.15,10.33.75.249,,,Rango DHCP
+238,MONTEVIDEO - TORRE,Torre - Piso 19,U,4C,10.33.76.15,10.33.76.249,,,IP fija con emulación
+239,MONTEVIDEO - TORRE,Torre - Piso 19,U,4D,10.33.77.15,10.33.77.249,,,IP fija sin emulación
+240,MONTEVIDEO - TORRE,Torre - Piso 19,U,4E,10.33.78.15,10.33.78.249,,,Rango reservado
+241,MONTEVIDEO - TORRE,Torre - Piso 19,U,4F,10.33.79.15,10.33.79.249,,,Rango DHCP
+242,MONTEVIDEO - TORRE,Torre - Piso 20,U,50,10.33.80.15,10.33.80.249,,,IP fija con emulación
+243,MONTEVIDEO - TORRE,Torre - Piso 20,U,51,10.33.81.15,10.33.81.249,,,IP fija sin emulación
+244,MONTEVIDEO - TORRE,Torre - Piso 20,U,52,10.33.82.15,10.33.82.249,,,Rango reservado
+245,MONTEVIDEO - TORRE,Torre - Piso 20,U,53,10.33.83.15,10.33.83.249,,,Rango DHCP
+246,MONTEVIDEO - TORRE,Torre - Piso 21,U,54,10.33.84.15,10.33.84.249,,,IP fija con emulación
+247,MONTEVIDEO - TORRE,Torre - Piso 21,U,55,10.33.85.15,10.33.85.249,,,IP fija sin emulación
+248,MONTEVIDEO - TORRE,Torre - Piso 21,U,56,10.33.86.15,10.33.86.249,,,Rango reservado
+249,MONTEVIDEO - TORRE,Torre - Piso 21,U,57,10.33.87.15,10.33.87.249,,,Rango DHCP
+250,MONTEVIDEO - TORRE,Torre - Piso 22,U,58,10.33.88.15,10.33.88.249,,,IP fija con emulación
+251,MONTEVIDEO - TORRE,Torre - Piso 22,U,59,10.33.89.15,10.33.89.249,,,IP fija sin emulación
+252,MONTEVIDEO - TORRE,Torre - Piso 22,U,5A,10.33.90.15,10.33.90.249,,,Rango reservado
+253,MONTEVIDEO - TORRE,Torre - Piso 22,U,5B,10.33.91.15,10.33.91.249,,,Rango DHCP
+254,MONTEVIDEO - TORRE,Torre - Piso 23,U,5C,10.33.92.15,10.33.92.249,,,IP fija con emulación
+255,MONTEVIDEO - TORRE,Torre - Piso 23,U,5D,10.33.93.15,10.33.93.249,,,IP fija sin emulación
+256,MONTEVIDEO - TORRE,Torre - Piso 23,U,5E,10.33.94.15,10.33.94.249,,,Rango reservado
+257,MONTEVIDEO - TORRE,Torre - Piso 23,U,5F,10.33.95.15,10.33.95.249,,,Rango DHCP
+258,MONTEVIDEO - TORRE,Torre - Piso 24,U,60,10.33.96.15,10.33.96.249,,,IP fija con emulación
+259,MONTEVIDEO - TORRE,Torre - Piso 24,U,61,10.33.97.15,10.33.97.249,,,IP fija sin emulación
+260,MONTEVIDEO - TORRE,Torre - Piso 24,U,62,10.33.98.15,10.33.98.249,,,Rango reservado
+261,MONTEVIDEO - TORRE,Torre - Piso 24,U,63,10.33.99.15,10.33.99.249,,,Rango DHCP
+262,MONTEVIDEO - TORRE,Torre - Piso 25,U,64,10.33.100.15,10.33.100.249,,,IP fija con emulación
+263,MONTEVIDEO - TORRE,Torre - Piso 25,U,65,10.33.101.15,10.33.101.249,,,IP fija sin emulación
+264,MONTEVIDEO - TORRE,Torre - Piso 25,U,66,10.33.102.15,10.33.102.249,,,Rango reservado
+265,MONTEVIDEO - TORRE,Torre - Piso 25,U,67,10.33.103.15,10.33.103.249,,,Rango DHCP
+266,MONTEVIDEO - TORRE,Torre - Subsuelo,U,98,10.33.152.15,10.33.152.249,,,IP fija sin emulación
+267,MONTEVIDEO - TORRE,Torre - Subsuelo,U,99,10.33.153.15,10.33.153.249,,,IP fija con emulación
+268,MONTEVIDEO - TORRE,Torre - Subsuelo,U,9A,10.33.154.15,10.33.154.249,,,Rango reservado
+269,MONTEVIDEO - TORRE,Torre - Subsuelo,U,9B,10.33.155.15,10.33.155.249,,,"Rango DHCP - SS, Intendencia y MUSEO"
+270,MONTEVIDEO - TORRE,Torre - Subsuelo B,U,9C,10.33.156.15,10.33.156.249,,,IP fija con emulación
+271,MONTEVIDEO - TORRE,Torre - Subsuelo B,U,9D,10.33.157.15,10.33.157.249,,,IP fija sin emulación
+272,MONTEVIDEO - TORRE,Torre - Subsuelo B,U,9E,10.33.158.15,10.33.158.249,,,Rango reservado
+273,MONTEVIDEO - TORRE,Torre - Subsuelo B,U,9F,10.33.159.15,10.33.159.249,,,Rango DHCP
+340,MONTEVIDEO - PERIFERIA,Cerro CCTV,T,87,10.37.135.15,10.37.135.249,,,CCTV
+341,MONTEVIDEO - PERIFERIA,Carrasco CCTV,T,88,10.37.136.15,10.37.136.249,,,CCTV
+342,MONTEVIDEO - PERIFERIA,Paso de la Arena CCTV,T,89,10.37.137.15,10.37.137.249,,,CCTV
+343,MONTEVIDEO - PERIFERIA,Plaza CCTV,T,8A,10.37.138.15,10.37.138.249,,,CCTV
+344,MONTEVIDEO - PERIFERIA,Piedras Blancas CCTV,T,8B,10.37.139.15,10.37.139.249,,,CCTV
+345,MONTEVIDEO - PERIFERIA,Sayago CCTV,T,8C,10.37.140.15,10.37.140.249,,,CCTV
+346,MONTEVIDEO - PERIFERIA,Union Distribucion de Facturas CCTV,T,8D,10.37.141.15,10.37.141.249,,,CCTV
+347,MONTEVIDEO - PERIFERIA,Colon CCTV,T,8E,10.37.142.15,10.37.142.249,,,CCTV
+348,MONTEVIDEO - PERIFERIA,Santiago Vazquez  CCTV,T,8F,10.37.143.15,10.37.143.249,,,CCTV
+349,MONTEVIDEO - PERIFERIA,Tres Cruces  CCTV,T,90,10.37.144.15,10.37.144.249,,,CCTV
+338,MONTEVIDEO - TORRE,CCTV Periferia,U,74,10.33.116.15,10.33.116.249,,,CCTV Locales c/ cámaras administrados por grupo LAN
+339,MONTEVIDEO - TORRE,CCTV Torre,U,75,10.33.117.15,10.33.117.249,,,CCTV
+385,MONTEVIDEO - PERIFERIA,Calle Canaro (Ex Pocitos) CCTV,T,4F,10.37.79.15,10.37.79.249,,,CCTV
+495,PAYSANDU,Paysandu,I,00,10.44.0.15,10.44.0.249,,,IP fija sin emulación
+63, ,Paysandu,I,01,10.44.1.15,10.44.1.249,IA0I??,,Montevideo 875
+496,PAYSANDU,Paysandu,I,02,10.44.2.15,10.44.2.249,,,Rango reservado
+497,PAYSANDU,Paysandu,I,03,10.44.3.1,10.44.3.254,,SI,DHCP
+64,PAYSANDU,Guichon,I,11,10.44.17.15,10.44.17.249,IB0I??,SI,
+65,PAYSANDU,Paysandu Economico Financiera,I,21,10.44.33.15,10.44.33.249,,SI,Zorrilla 852 - Aula Virtual PB / Economico Financiera P1
+66,PAYSANDU,Hipercentro,I,31,10.44.49.15,10.44.49.249,IH0I??,SI,Hipercentro SuperStar Calle Washington 1673
+386,PAYSANDU,Paysandu Planta Externa,I,41,10.44.65.15,10.44.65.249,IS0IS?,SI,
+390,PAYSANDU,Paysandu Terminal de Omnibus,I,51,10.44.81.15,10.44.81.249,IF0I??,,Zorrilla de San Martín esquina Artigas (Tel 47227099) Terminal y Shopping
+399,PAYSANDU,Quebracho (CAC),I,61,10.44.97.15,10.44.97.249,IG0??,,
+431,PAYSANDU,Piedras Coloradas,I,71,10.44.113.15,10.44.113.249,,,
+432,PAYSANDU,Paysandu Innova,I,81,10.44.129.15,10.44.129.249,,,Leandro Gómez esq. 33 Orientales sin numero
+458,PAYSANDU,Nuevo Paysandu (CAC),I,79,10.44.121.15,10.44.121.249,,,
+474,PAYSANDU,El Eucalipto (CAC),I,91,10.44.145.15,10.44.145.249,,,Va por Radio Enlace actualmentne 190.64.18.255 - Pc 190.64.18.244 / 27
+518,PAYSANDU,Deposito Paysandu,I,98,10.44.152.15,10.44.152.249,,,Joaquín Suárez 1078 
+567,PAYSANDU,Quebracho,I,A1,10.44.161.15,10.44.161.249,,,CMNO VIA FERREA 1A PARL ESTE-VCNL P: 8451R
+582,PAYSANDU,Termas de Guaviyu PE,I,B1,10.44.177.15,10.44.177.249,,,Enlace Anterior 
+582,PAYSANDU,Termas de Guaviyu PE,I,B2,10.44.178.15,10.44.178.249,,,"Paralela a Ruta 3, Predio Termas, P114R Caseta Num. 47559900"
+67,RIO NEGRO,Fray Bentos,J,01,10.43.1.15,10.43.1.249,,SI,
+68,RIO NEGRO,Young  ,J,11,10.43.17.15,10.43.17.249,,,
+376,RIO NEGRO,Young  Planta Externa,J,21,10.43.33.15,10.43.33.249,,,
+394,RIO NEGRO,San Javier (CAC),J,31,10.43.49.15,10.43.49.249,,,
+433,RIO NEGRO,Las Cañas,J,41,10.43.65.15,10.43.65.249,,,Rambla Costanera frente a la Playa Grande del balneario
+463,RIO NEGRO,Nuevo Berlín,J,51,10.43.81.15,10.43.81.249,,,33 Orientales S/N
+508,RIO NEGRO,Pueblo Grecco (CAC),J,61,10.43.97.15,10.43.97.249,,,
+554,RIO NEGRO,Nuevo Berlín Planta Externa,J,71,10.43.113.15,10.43.113.249,,,33 Orientales s/n
+555,RIO NEGRO,San Javier Planta Externa,J,81,10.43.129.15,10.43.129.249,,,José Pedro Varela s/n
+568,RIO NEGRO,Nuevo Berlin Provisorio,J,91,10.43.145.15,10.43.145.249,,,18 de Julio s/n esquina Lavalleja 
+598,RIO NEGRO,San Javier RB,J,A1,10.43.161.15,10.43.161.249,,,"Caseta Direccion Ruta 24 Km 67,500  
+-32669823    -57998808
+"
+599,RIO NEGRO,Palmar PE,J,A9,10.43.169.15,10.43.169.249,,,"Caseta Ruta 20 Km 63,500 después a la izquierda 3 km"
+604,RIO NEGRO,Haedo RB y Trans,J,AA,10.43.170.15,10.43.170.249,,,"Caseta Ruta 24, Km. 33 -32.944268 -57.983132"
+54,RIVERA,Rivera,F,01,10.53.1.15,10.53.1.249,,SI,Agraciada 606
+55,RIVERA,Vichadero,F,11,10.53.17.15,10.53.17.249,,SI,
+56,RIVERA,Tranqueras,F,21,10.53.33.15,10.53.33.249,,SI,
+57,RIVERA,Minas de Corrales,F,31,10.53.49.15,10.53.49.249,,SI,Dr Davidson s/n
+525,RIVERA,Shopping Melancía,F,41,10.53.65.15,10.53.65.249,,,
+580,RIVERA,Tranqueras PE,F,51,10.53.81.15,10.53.81.249,,,Artigas s/n entre Joaquín Suarez y Elena Navarro
+605,RIVERA,Vichadero Caseta,F,8C,10.53.140.15,10.53.140.249,,,"Carlos María Broggio s/n, entre Tranqueras y ruta 6. -31.774325 -54.684571"
+42,ROCHA,Rocha  ,C,01,10.57.1.15,10.57.1.249,,SI,General Artigas 159 esq Rodo
+43,ROCHA,Chuy  ,C,11,10.57.17.15,10.57.17.249,,SI,
+44,ROCHA,Castillos ,C,21,10.57.33.15,10.57.33.249,,SI,
+45,ROCHA,Lascano  ,C,31,10.57.49.15,10.57.49.249,,SI,
+46,ROCHA,La Paloma ,C,41,10.57.65.15,10.57.65.249,,SI,
+301,ROCHA,Rocha (local viejo en reformas),C,51,10.57.81.15,10.57.81.249,,,Local PROVISORIO   
+374,ROCHA,Rocha Planta Externa,C,61,10.57.97.15,10.57.97.249,,,Luis A.de Herrera N° 318 entre Manuel Oribe y Pablo Zufriategui
+461,ROCHA,Punta Del Diablo,C,71,10.57.113.15,10.57.113.224,,,Simon Bolivar y Aldea Del Mar  
+465,ROCHA,Santa Teresa,C,81,10.57.129.15,10.57.129.224,,,Parque Santa Teresa - Contenedor Micro / La Moza
+561,ROCHA,Velazquez,C,91,10.57.145.15,10.57.145.249,,,Calle 10 
+562,ROCHA,La Coronilla,C,A1,10.57.161.15,10.57.161.249,,,
+61,SALTO,Salto,H,01,10.45.1.15,10.45.1.249,HA0H??,SI,Grito de Asencio 55 y Brasil
+388,SALTO,Barrio Artigas (CAC),H,11,10.45.17.15,10.45.17.249,HB0H??,,
+569,SALTO,Belen PE,H,21,10.45.33.15,10.45.33.249,,,CL ALVAREZ SANCHEZ P: 426U
+570,SALTO,Biassini PE,H,31,10.45.49.15,10.45.49.249,,,FICT RADIOBASE SALTO-BIASSINI S/N  P:  1091
+583,SALTO,Villa Constitucion PE,H,41,10.45.65.15,10.45.65.249,,,"Av. Domingo Perez y 18 de Julio Padrón P174U Constitución, Caseta. Num. 47649900."
+584,SALTO,Colonia Itapebi PE,H,51,10.45.81.15,10.45.81.249,,,"Ruta 31 km 51,500. Es contenedor, yendo hacia el Este a mano derecha"
+84,SAN JOSÉ,San Jose  ,M,01,10.50.1.15,10.50.1.249,OA0O??,SI,EVARISTO CIGANDA 627
+85,SAN JOSÉ,Libertad  ,M,11,10.50.17.15,10.50.17.249,,,
+86,SAN JOSÉ,Ciudad del Plata,M,21,10.50.33.15,10.50.33.249,,,Km 28.200 / Ex Autodromo
+87,SAN JOSÉ,E. Paullier,M,31,10.50.49.15,10.50.49.249,,,
+88,SAN JOSÉ,V. Rodriguez,M,41,10.50.65.15,10.50.65.249,,,
+89,SAN JOSÉ,R. Peraza,M,51,10.50.81.15,10.50.81.249,,,
+545,SAN JOSÉ,Villa Rodríguez,M,58,10.50.88.15,10.50.88.249,,,"Cl Gonzalez, Josefina P: 503U"
+546,SAN JOSÉ,Delta del Tigre,M,59,10.50.89.15,10.50.89.249,,,Cl Inca S/N
+547,SAN JOSÉ,Orillas del Plata,M,5A,10.50.90.15,10.50.90.249,,,"Ruta 1 KM 47,700"
+548,SAN JOSÉ,Playa Pascual,M,5B,10.50.91.15,10.50.91.249,,,Cl Los Peñaroles P: 1507U
+549,SAN JOSÉ,Tropas Viejas,M,5C,10.50.92.15,10.50.92.249,,,Ruta 1 P: 30U
+550,SAN JOSÉ,Ecilda Paullier,M,5D,10.50.93.15,10.50.93.249,,,Ruta 11 P: 953R
+551,SAN JOSÉ,Puntas de Valdez,M,5E,10.50.94.15,10.50.94.249,,,"Cl Faggiani, Abel P: 23U"
+552,SAN JOSÉ,Kiyu,M,5F,10.50.95.15,10.50.95.249,,,Cl Ibirapita S/N P: 18079R
+603,SAN JOSÉ,Colonia Etchepare Caseta,M,8C,10.50.140.15,10.50.140.249,,,"Calle Constitución s/n -34.440689 -56.435933 Ruta 11, Km. 79"
+69,SORIANO,Mercedes,K,01,10.41.1.15,10.41.1.249,,SI,
+70,SORIANO,Cardona ,K,11,10.41.17.15,10.41.17.249,,SI,
+71,SORIANO,Dolores  ,K,21,10.41.33.15,10.41.33.249,,SI,
+72,SORIANO,José Enrique Rodó,K,31,10.41.49.15,10.41.49.249,,,
+73,SORIANO,Palmitas,K,41,10.41.65.15,10.41.65.249,,,
+601,SORIANO,Santa Catalina Caseta,K,8C,10.41.140.15,10.41.140.249,,,"Caseta - Calle Angel Ceriani s/n -33.788944, -57.492027 Ruta 2, Km. 197"
+602,SORIANO,José Enrique Rodó Caseta,K,8D,10.41.141.15,10.41.141.249,,,"Caseta - Calle 18 s/n, entre calle 7 y 9 -33.701073 -57530060 Ruta 2, Km. 215"
+104,TACUAREMBO,Tacuarembó,R,01,10.52.1.15,10.52.1.249,,SI,Sarandí 240 y General Flores
+105,TACUAREMBO,Paso de los Toros,R,11,10.52.17.15,10.52.17.249,,SI,
+106,TACUAREMBO,San Gregorio de Polanco,R,21,10.52.33.15,10.52.33.249,,SI,
+107,TACUAREMBO,Depósito Tacuarembo,R,31,10.52.49.15,10.52.49.249,,SI,
+466,TACUAREMBO,Patria Gaucha (Provisorio),R,41,10.52.65.15,10.52.65.224,,,Patria Gaucha
+594,TACUAREMBO,Achar,R,8C,10.52.140.15,10.52.140.249,,,"Achar, Calle Zorrilla de San Martin y calle 13, al lado estación de trenes. (32°24'23.2""S 56°10'54.3""W)"
+595,TACUAREMBO,Peralta,R,8D,10.52.141.15,10.52.141.249,,,"Estación El Lago Parque eólico. Ruta 5 Km 278,300, 1,5 Km a la derecha  (32°34'42.3""S 56°24'45.8""W)"
+596,TACUAREMBO,Pampa,R,8E,10.52.142.15,10.52.142.249,,,"Parque eólico Pampa. Ruta 5 Km 314. (32°18'07.4""S 56°14'36.9""W)"
+47,TREINTA Y TRES,Treinta y Tres,D,01,10.59.1.15,10.59.1.249,,SI,
+48,TREINTA Y TRES,Cerro Chato,D,11,10.59.17.15,10.59.17.249,,SI,
+49,TREINTA Y TRES,Vergara,D,21,10.59.33.15,10.59.33.249,,SI,
+50,TREINTA Y TRES,Santa Clara del Olimar,D,31,10.59.49.15,10.59.49.249,,SI,
+560,TREINTA Y TRES,Enrique Martinez,D,41,10.59.65.15,10.59.65.249,,,P: 317U
+411,Z-AGENCIAS,Agencias del Dpto de ARTIGAS,Z,28,10.226.40.0,10.226.40.255,,,Agencieros del departamento de Artigas
+412,Z-AGENCIAS,Agencias del Dpto de CANELONES,Z,2E,10.226.46.0,10.226.46.255,,,Agencieros del departamento de Canelones
+413,Z-AGENCIAS,Agencias del Dpto de CERRO LARGO,Z,33,10.226.51.0,10.226.51.255,,,Agencieros del departamento de Cerro Largo
+414,Z-AGENCIAS,Agencias del Dpto de COLONIA,Z,2A,10.226.42.0,10.226.42.255,,,Agencieros del departamento de Colonia
+415,Z-AGENCIAS,Agencias del Dpto de DURAZNO,Z,31,10.226.49.0,10.226.49.255,,,Agencieros del departamento de Durazno
+416,Z-AGENCIAS,Agencias del Dpto de FLORES,Z,36,10.226.54.0,10.226.54.255,,,Agencieros del departamento de Flores
+417,Z-AGENCIAS,Agencias del Dpto de FLORIDA,Z,30,10.226.48.0,10.226.48.255,,,Agencieros del departamento de Florida
+418,Z-AGENCIAS,Agencias del Dpto de LAVALLEJA,Z,38,10.226.56.0,10.226.56.255,,,Agencieros del departamento de Lavalleja
+419,Z-AGENCIAS,Agencias del Dpto de MALDONADO,Z,3A,10.226.58.0,10.226.58.255,,,Agencieros del departamento de Maldonado
+420,Z-AGENCIAS,Agencias del Dpto de PAYSANDU,Z,2C,10.226.44.0,10.226.44.255,,,Agencieros del departamento de Paysandú
+421,Z-AGENCIAS,Agencias del Dpto de RIO NEGRO,Z,2B,10.226.43.0,10.226.43.255,,,Agencieros del departamento de Río Negro
+422,Z-AGENCIAS,Agencias del Dpto de RIVERA,Z,35,10.226.53.0,10.226.53.255,,,Agencieros del departamento de Rivera
+423,Z-AGENCIAS,Agencias del Dpto de ROCHA,Z,39,10.226.57.0,10.226.57.255,,,Agencieros del departamento de Rocha
+424,Z-AGENCIAS,Agencias del Dpto de SALTO,Z,2D,10.226.45.0,10.226.45.255,,,Agencieros del departamento de Salto
+425,Z-AGENCIAS,Agencias del Dpto de SAN JOSÉ,Z,32,10.226.50.0,10.226.50.255,,,Agencieros del departamento de San José
+426,Z-AGENCIAS,Agencias del Dpto de SORIANO,Z,29,10.226.41.0,10.226.41.255,,,Agencieros del departamento de Soriano
+427,Z-AGENCIAS,Agencias del Dpto de TACUAREMBO,Z,34,10.226.52.0,10.226.52.255,,,Agencieros del departamento de Tacuarembó
+428,Z-AGENCIAS,Agencias del Dpto de TREINTA Y TRES,Z,3B,10.226.59.0,10.226.59.255,,,Agencieros del departamento de Treinta y Tres
+391,Z-STANDS,Stand Antel #1,Z,01,10.101.1.15,10.101.1.249,,,Servicios Pre-Definidos para Stand de Antel en Eventos 
+392,Z-STANDS,Stand Antel #2,Z,02,10.101.2.15,10.101.2.249,,,Servicios Pre-Definidos para Stand de Antel en Eventos 
+393,Z-STANDS,Stand Antel #3,Z,03,10.101.3.15,10.101.3.249,,,Servicios Pre-Definidos para Stand de Antel en Eventos 
+429,Z-STANDS,Stand Antel #4,Z,04,10.101.4.15,10.101.4.249,,,Servicios Pre-Definidos para Stand de Antel en Eventos 
+476,ARTIGAS,CAC  INTERNET,G,0Z,,,,,CAC INTERNET del departamento de Artigas
+477,CANELONES,CAC  INTERNET,A,0Z,,,,,CAC INTERNET del departamento de Canelones
+478,CERRO LARGO,CAC  INTERNET,E,0Z,,,,,CAC INTERNET del departamento de Cerro Largo
+479,COLONIA,CAC  INTERNET,L,0Z,,,,,CAC INTERNET del departamento de Colonia
+480,DURAZNO,CAC  INTERNET,Q,0Z,,,,,CAC INTERNET del departamento de Durazno
+481,FLORES,CAC  INTERNET,N,0Z,,,,,CAC INTERNET del departamento de Flores
+482,FLORIDA,CAC  INTERNET,O,0Z,,,,,CAC INTERNET del departamento de Florida
+483,LAVALLEJA,CAC  INTERNET,P,0Z,,,,,CAC INTERNET del departamento de Lavalleja
+484,MALDONADO,CAC  INTERNET,B,0Z,,,,,CAC INTERNET del departamento de Maldonado
+485,PAYSANDU,CAC  INTERNET,I,0Z,,,,,CAC INTERNET del departamento de Paysandú
+486,RIO NEGRO,CAC  INTERNET,J,0Z,,,,,CAC INTERNET del departamento de Río Negro
+487,RIVERA,CAC  INTERNET,F,0Z,,,,,CAC INTERNET del departamento de Rivera
+488,ROCHA,CAC  INTERNET,C,0Z,,,,,CAC INTERNET del departamento de Rocha
+489,SALTO,CAC  INTERNET,H,0Z,,,,,CAC INTERNET del departamento de Salto
+490,SAN JOSÉ,CAC  INTERNET,M,0Z,,,,,CAC INTERNET del departamento de San José
+491,SORIANO,CAC  INTERNET,K,0Z,,,,,CAC INTERNET del departamento de Soriano
+492,TACUAREMBO,CAC  INTERNET,R,0Z,,,,,CAC INTERNET del departamento de Tacuarembó
+493,TREINTA Y TRES,CAC  INTERNET,D,0Z,,,,,CAC INTERNET del departamento de Treinta y Tres
+494,MONTEVIDEO,CAC  INTERNET,S,0Z,,,,,CAC INTERNET del departamento de Montevideo
