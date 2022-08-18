@@ -238,9 +238,10 @@ public class jp_ingreso extends javax.swing.JPanel {
         txtvalor.setText("Codigo generado para " + (String) cmb_tipo.getSelectedItem() + " " + devuelve_ubicacion((String) cmb_departamento.getSelectedItem()) + " " + valor_final);
     }
 
+    
     ArrayList<String> devuelve_lista_segun_tipo_dispositivo(String codigo_ubicacion, String codigo_red, String codigo_dispositivo) {
         if (codigo_dispositivo.equals("0")) {
-            return devuelve_listado_PC(codigo_ubicacion, codigo_red, codigo_dispositivo);
+            return devuelve_listado_nomenclaturas_pc(codigo_ubicacion, codigo_red, codigo_dispositivo);
         }
         if (codigo_dispositivo.equals("2")) {
             return devuelve_listado_Raspberry(codigo_ubicacion, codigo_red, codigo_dispositivo);
@@ -256,6 +257,7 @@ public class jp_ingreso extends javax.swing.JPanel {
         }
         return null;
     }
+    
 
     String devuelve_ubicacion(String texto) {
         String[] cortarString_seleccion = texto.split("::");
@@ -287,6 +289,8 @@ public class jp_ingreso extends javax.swing.JPanel {
             Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
         }
         /*
+        
+        PARA LLAMAR A TRAVES DE EXCEL
         InputStream excelStream = null;
         listado_departamentos = null;
         listado_departamentos = new ArrayList<>();
@@ -378,6 +382,16 @@ public class jp_ingreso extends javax.swing.JPanel {
     }
 
     void cargar_tipo_dispositivos() {
+        consultas c = new consultas();
+        try {
+            listado_tipo_dispositivos = c.devuelve_listado_tipo_equipo();
+            for (int i = 0; i < listado_tipo_dispositivos.size(); i++) {
+                cmb_tipo.addItem(listado_tipo_dispositivos.get(i));
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        /*
         InputStream excelStream = null;
         listado_tipo_dispositivos = null;
         listado_tipo_dispositivos = new ArrayList<>();
@@ -447,6 +461,7 @@ public class jp_ingreso extends javax.swing.JPanel {
                 System.out.println("Error in file processing after close it (Error al procesar el fichero después de cerrarlo): " + ex);
             }
         }
+         */
     }
 
     Integer convertir_texto_a_numero(String texto) {
@@ -508,17 +523,26 @@ public class jp_ingreso extends javax.swing.JPanel {
     }
 
     String devuelve_codigo_dispositivo(String texto) {
-        //String[] cortarString_seleccion = dispositivo.split("::");
+        String[] cortarString_parametro = texto.split("::");
         for (int i = 0; i < listado_tipo_dispositivos.size(); i++) {
             String[] cortarString_listado = listado_tipo_dispositivos.get(i).split("::");
-            if (cortarString_listado[1].equals(texto)) {
-                return cortarString_listado[0];
+            if ((cortarString_listado.length > 1) && (!cortarString_listado[1].equals("")) && cortarString_listado[1].equals(cortarString_parametro[1])) {
+                return cortarString_listado[1];
             }
         }
         return "";
     }
 
-    ArrayList<String> devuelve_listado_PC(String ubicacion, String red, String tipo_dispositivo) {
+    ArrayList<String> devuelve_listado_nomenclaturas_pc(String ubicacion, String red, String tipo_dispositivo) {
+        consultas c = new consultas();
+        try {
+            return c.devuelve_listado_nomenclaturas_pc(ubicacion, red, tipo_dispositivo);
+        } catch (Exception ex) {
+            Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        /*
+        
         InputStream excelStream = null;
         ArrayList<String> lista = new ArrayList<>();
 
@@ -598,334 +622,48 @@ public class jp_ingreso extends javax.swing.JPanel {
         }
         //System.out.println("FIN");
         return lista;
+*/
+        return null;
     }
 
     ArrayList<String> devuelve_listado_Serv_Impresion(String ubicacion, String red, String tipo_dispositivo) {
-        InputStream excelStream = null;
-        ArrayList<String> lista = new ArrayList<>();
-
+        consultas c = new consultas();
         try {
-            Boolean ya_paso_primer_columna = false;
-            excelStream = new FileInputStream(new File("Administracion IP.xls"));
-            // High level representation of a workbook.
-            // Representación del más alto nivel de la hoja excel.
-            HSSFWorkbook hssfWorkbook = new HSSFWorkbook(excelStream);
-            // We chose the sheet is passed as parameter. 
-            // Elegimos la hoja que se pasa por parámetro.
-            HSSFSheet hssfSheet = hssfWorkbook.getSheetAt(2);//reemplazar por hoja 0, que tiene codigos deptos e ip, etc
-            // An object that allows us to read a row of the excel sheet, and extract from it the cell contents.
-            // Objeto que nos permite leer un fila de la hoja excel, y de aquí extraer el contenido de las celdas.
-            HSSFRow hssfRow;
-            // Initialize the object to read the value of the cell 
-            // Inicializo el objeto que leerá el valor de la celda
-            HSSFCell cell;
-            // I get the number of rows occupied on the sheet
-            // Obtengo el número de filas ocupadas en la hoja
-            int rows = hssfSheet.getLastRowNum();
-            // I get the number of columns occupied on the sheet
-            // Obtengo el número de columnas ocupadas en la hoja
-            int cols = 0;
-            // A string used to store the reading cell
-            // Cadena que usamos para almacenar la lectura de la celda
-            FormulaEvaluator evaluator = hssfWorkbook.getCreationHelper().createFormulaEvaluator();
-            // For this example we'll loop through the rows getting the data we want
-            // Para este ejemplo vamos a recorrer las filas obteniendo los datos que queremos    
-            //System.out.println("INICIO");
-            for (int fila = 0; fila <= rows; fila++) {
-                //System.out.println(fila);
-                hssfRow = hssfSheet.getRow(fila);
-                if (hssfRow == null) {
-                    break;
-                } else {
-                    //for (short c = 0; c < (cols = hssfRow.getLastCellNum()); c++) {
-                    if (fila == 0) {
-                        //PARA QUE SALTEE LA PRIMER FILA QUE TIENE EL TITULO
-                        if (!ya_paso_primer_columna) {
-                            ya_paso_primer_columna = true;
-                        }
-                        continue;
-                    }
-                    if ((hssfRow.getCell(8)) == null) {
-                        continue;
-                    }
-                    if (hssfRow.getCell(8).getCellType() == Cell.CELL_TYPE_FORMULA) {
-                        switch (hssfRow.getCell(8).getCachedFormulaResultType()) {
-                            case Cell.CELL_TYPE_NUMERIC:
-                                CellReference cellReference = new CellReference("I" + (fila));
-                                Row row = hssfSheet.getRow(fila);
-                                Cell cell1 = row.getCell(cellReference.getCol());
-                                CellValue cellValue = evaluator.evaluate(cell1);
-                                if (coincide_ubicacion(ubicacion, red, tipo_dispositivo, chequear_string_null(cellValue.getStringValue()))) {
-                                    //System.out.println(chequear_string_null(cellValue.getStringValue()));
-                                    lista.add(chequear_string_null(cellValue.getStringValue()));
-                                }
-                                break;
-                        }
-                    }
-
-                }
-            }
-        } catch (FileNotFoundException fileNotFoundException) {
-            System.out.println("The file not exists (No se encontró el fichero): " + fileNotFoundException);
-        } catch (IOException ex) {
-            System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
+            return c.devuelve_listado_nomenclaturas_serv_impresion(ubicacion, red, tipo_dispositivo);
         } catch (Exception ex) {
             Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                excelStream.close();
-            } catch (IOException ex) {
-                System.out.println("Error in file processing after close it (Error al procesar el fichero después de cerrarlo): " + ex);
-            }
         }
-        //System.out.println("FIN");
-        return lista;
+        return null;
     }
 
     ArrayList<String> devuelve_listado_Print_Servers(String ubicacion, String red, String tipo_dispositivo) {
-        InputStream excelStream = null;
-        ArrayList<String> lista = new ArrayList<>();
-
+        consultas c = new consultas();
         try {
-            Boolean ya_paso_primer_columna = false;
-            excelStream = new FileInputStream(new File("Administracion IP.xls"));
-            // High level representation of a workbook.
-            // Representación del más alto nivel de la hoja excel.
-            HSSFWorkbook hssfWorkbook = new HSSFWorkbook(excelStream);
-            // We chose the sheet is passed as parameter. 
-            // Elegimos la hoja que se pasa por parámetro.
-            HSSFSheet hssfSheet = hssfWorkbook.getSheetAt(3);//reemplazar por hoja 0, que tiene codigos deptos e ip, etc
-            // An object that allows us to read a row of the excel sheet, and extract from it the cell contents.
-            // Objeto que nos permite leer un fila de la hoja excel, y de aquí extraer el contenido de las celdas.
-            HSSFRow hssfRow;
-            // Initialize the object to read the value of the cell 
-            // Inicializo el objeto que leerá el valor de la celda
-            HSSFCell cell;
-            // I get the number of rows occupied on the sheet
-            // Obtengo el número de filas ocupadas en la hoja
-            int rows = hssfSheet.getLastRowNum();
-            // I get the number of columns occupied on the sheet
-            // Obtengo el número de columnas ocupadas en la hoja
-            int cols = 0;
-            // A string used to store the reading cell
-            // Cadena que usamos para almacenar la lectura de la celda
-            FormulaEvaluator evaluator = hssfWorkbook.getCreationHelper().createFormulaEvaluator();
-            // For this example we'll loop through the rows getting the data we want
-            // Para este ejemplo vamos a recorrer las filas obteniendo los datos que queremos    
-            //System.out.println("INICIO");
-            for (int fila = 0; fila <= rows; fila++) {
-                //System.out.println(fila);
-                hssfRow = hssfSheet.getRow(fila);
-                if (hssfRow == null) {
-                    break;
-                } else {
-                    //for (short c = 0; c < (cols = hssfRow.getLastCellNum()); c++) {
-                    if (fila == 0) {
-                        //PARA QUE SALTEE LA PRIMER FILA QUE TIENE EL TITULO
-                        if (!ya_paso_primer_columna) {
-                            ya_paso_primer_columna = true;
-                        }
-                        continue;
-                    }
-                    if ((hssfRow.getCell(7)) == null) {
-                        continue;
-                    }
-                    if (hssfRow.getCell(7).getCellType() == Cell.CELL_TYPE_FORMULA) {
-                        switch (hssfRow.getCell(7).getCachedFormulaResultType()) {
-                            case Cell.CELL_TYPE_NUMERIC:
-                                CellReference cellReference = new CellReference("H" + (fila));
-                                Row row = hssfSheet.getRow(fila);
-                                Cell cell1 = row.getCell(cellReference.getCol());
-                                CellValue cellValue = evaluator.evaluate(cell1);
-                                if (coincide_ubicacion(ubicacion, red, tipo_dispositivo, chequear_string_null(cellValue.getStringValue()))) {
-                                    //System.out.println(chequear_string_null(fila+" --- "+cellValue.getStringValue()));
-                                    lista.add(chequear_string_null(cellValue.getStringValue()));
-                                }
-                                break;
-                        }
-                    }
-
-                }
-            }
-        } catch (FileNotFoundException fileNotFoundException) {
-            System.out.println("The file not exists (No se encontró el fichero): " + fileNotFoundException);
-        } catch (IOException ex) {
-            System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
+            return c.devuelve_listado_nomenclaturas_print_servers(ubicacion, red, tipo_dispositivo);
         } catch (Exception ex) {
             Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                excelStream.close();
-            } catch (IOException ex) {
-                System.out.println("Error in file processing after close it (Error al procesar el fichero después de cerrarlo): " + ex);
-            }
         }
-        //System.out.println("FIN");
-        return lista;
+        return null;
     }
 
     ArrayList<String> devuelve_listado_Raspberry(String ubicacion, String red, String tipo_dispositivo) {
-        InputStream excelStream = null;
-        ArrayList<String> lista = new ArrayList<>();
-
+        consultas c = new consultas();
         try {
-            Boolean ya_paso_primer_columna = false;
-            excelStream = new FileInputStream(new File("Administracion IP.xls"));
-            // High level representation of a workbook.
-            // Representación del más alto nivel de la hoja excel.
-            HSSFWorkbook hssfWorkbook = new HSSFWorkbook(excelStream);
-            // We chose the sheet is passed as parameter. 
-            // Elegimos la hoja que se pasa por parámetro.
-            HSSFSheet hssfSheet = hssfWorkbook.getSheetAt(5);//reemplazar por hoja 0, que tiene codigos deptos e ip, etc
-            // An object that allows us to read a row of the excel sheet, and extract from it the cell contents.
-            // Objeto que nos permite leer un fila de la hoja excel, y de aquí extraer el contenido de las celdas.
-            HSSFRow hssfRow;
-            // Initialize the object to read the value of the cell 
-            // Inicializo el objeto que leerá el valor de la celda
-            HSSFCell cell;
-            // I get the number of rows occupied on the sheet
-            // Obtengo el número de filas ocupadas en la hoja
-            int rows = hssfSheet.getLastRowNum();
-            // I get the number of columns occupied on the sheet
-            // Obtengo el número de columnas ocupadas en la hoja
-            int cols = 0;
-            // A string used to store the reading cell
-            // Cadena que usamos para almacenar la lectura de la celda
-            FormulaEvaluator evaluator = hssfWorkbook.getCreationHelper().createFormulaEvaluator();
-            // For this example we'll loop through the rows getting the data we want
-            // Para este ejemplo vamos a recorrer las filas obteniendo los datos que queremos    
-            //System.out.println("INICIO");
-            for (int fila = 0; fila <= rows; fila++) {
-                //System.out.println(fila);
-                hssfRow = hssfSheet.getRow(fila);
-                if (hssfRow == null) {
-                    break;
-                } else {
-                    //for (short c = 0; c < (cols = hssfRow.getLastCellNum()); c++) {
-                    if (fila == 0) {
-                        //PARA QUE SALTEE LA PRIMER FILA QUE TIENE EL TITULO
-                        if (!ya_paso_primer_columna) {
-                            ya_paso_primer_columna = true;
-                        }
-                        continue;
-                    }
-                    if ((hssfRow.getCell(7)) == null) {
-                        continue;
-                    }
-                    if (hssfRow.getCell(7).getCellType() == Cell.CELL_TYPE_FORMULA) {
-                        switch (hssfRow.getCell(7).getCachedFormulaResultType()) {
-                            case Cell.CELL_TYPE_NUMERIC:
-                                CellReference cellReference = new CellReference("H" + (fila));
-                                Row row = hssfSheet.getRow(fila);
-                                Cell cell1 = row.getCell(cellReference.getCol());
-                                CellValue cellValue = evaluator.evaluate(cell1);
-                                if (coincide_ubicacion(ubicacion, red, tipo_dispositivo, chequear_string_null(cellValue.getStringValue()))) {
-                                    //System.out.println(chequear_string_null(fila+" --- "+cellValue.getStringValue()));
-                                    lista.add(chequear_string_null(cellValue.getStringValue()));
-                                }
-                                break;
-                        }
-                    }
-
-                }
-            }
-        } catch (FileNotFoundException fileNotFoundException) {
-            System.out.println("The file not exists (No se encontró el fichero): " + fileNotFoundException);
-        } catch (IOException ex) {
-            System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
+            return c.devuelve_listado_nomenclaturas_raspberry(ubicacion, red, tipo_dispositivo);
         } catch (Exception ex) {
             Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                excelStream.close();
-            } catch (IOException ex) {
-                System.out.println("Error in file processing after close it (Error al procesar el fichero después de cerrarlo): " + ex);
-            }
         }
-        //System.out.println("FIN");
-        return lista;
+        return null;
     }
 
     ArrayList<String> devuelve_listado_Notebooks(String ubicacion, String red, String tipo_dispositivo) {
-        InputStream excelStream = null;
-        ArrayList<String> lista = new ArrayList<>();
-
+        consultas c = new consultas();
         try {
-            Boolean ya_paso_primer_columna = false;
-            excelStream = new FileInputStream(new File("Administracion IP.xls"));
-            // High level representation of a workbook.
-            // Representación del más alto nivel de la hoja excel.
-            HSSFWorkbook hssfWorkbook = new HSSFWorkbook(excelStream);
-            // We chose the sheet is passed as parameter. 
-            // Elegimos la hoja que se pasa por parámetro.
-            HSSFSheet hssfSheet = hssfWorkbook.getSheetAt(4);//reemplazar por hoja 0, que tiene codigos deptos e ip, etc
-            // An object that allows us to read a row of the excel sheet, and extract from it the cell contents.
-            // Objeto que nos permite leer un fila de la hoja excel, y de aquí extraer el contenido de las celdas.
-            HSSFRow hssfRow;
-            // Initialize the object to read the value of the cell 
-            // Inicializo el objeto que leerá el valor de la celda
-            HSSFCell cell;
-            // I get the number of rows occupied on the sheet
-            // Obtengo el número de filas ocupadas en la hoja
-            int rows = hssfSheet.getLastRowNum();
-            // I get the number of columns occupied on the sheet
-            // Obtengo el número de columnas ocupadas en la hoja
-            int cols = 0;
-            // A string used to store the reading cell
-            // Cadena que usamos para almacenar la lectura de la celda
-            FormulaEvaluator evaluator = hssfWorkbook.getCreationHelper().createFormulaEvaluator();
-            // For this example we'll loop through the rows getting the data we want
-            // Para este ejemplo vamos a recorrer las filas obteniendo los datos que queremos    
-            //System.out.println("INICIO");
-            for (int fila = 0; fila <= rows; fila++) {
-                //System.out.println(fila);
-                hssfRow = hssfSheet.getRow(fila);
-                if (hssfRow == null) {
-                    break;
-                } else {
-                    //for (short c = 0; c < (cols = hssfRow.getLastCellNum()); c++) {
-                    if (fila == 0) {
-                        //PARA QUE SALTEE LA PRIMER FILA QUE TIENE EL TITULO
-                        if (!ya_paso_primer_columna) {
-                            ya_paso_primer_columna = true;
-                        }
-                        continue;
-                    }
-                    if ((hssfRow.getCell(8)) == null) {
-                        continue;
-                    }
-                    if (hssfRow.getCell(8).getCellType() == Cell.CELL_TYPE_FORMULA) {
-                        switch (hssfRow.getCell(8).getCachedFormulaResultType()) {
-                            case Cell.CELL_TYPE_NUMERIC:
-                                CellReference cellReference = new CellReference("I" + (fila));
-                                Row row = hssfSheet.getRow(fila);
-                                Cell cell1 = row.getCell(cellReference.getCol());
-                                CellValue cellValue = evaluator.evaluate(cell1);
-                                if (coincide_ubicacion(ubicacion, red, tipo_dispositivo, chequear_string_null(cellValue.getStringValue()))) {
-                                    //System.out.println(chequear_string_null(fila+" --- "+cellValue.getStringValue()));
-                                    lista.add(chequear_string_null(cellValue.getStringValue()));
-                                }
-                                break;
-                        }
-                    }
-
-                }
-            }
-        } catch (FileNotFoundException fileNotFoundException) {
-            System.out.println("The file not exists (No se encontró el fichero): " + fileNotFoundException);
-        } catch (IOException ex) {
-            System.out.println("Error in file procesing (Error al procesar el fichero): " + ex);
+            return c.devuelve_listado_nomenclaturas_notebooks(ubicacion, red, tipo_dispositivo);
         } catch (Exception ex) {
             Logger.getLogger(jp_ingreso.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                excelStream.close();
-            } catch (IOException ex) {
-                System.out.println("Error in file processing after close it (Error al procesar el fichero después de cerrarlo): " + ex);
-            }
         }
-        //System.out.println("FIN");
-        return lista;
+        return null;
     }
 
     Boolean coincide_ubicacion(String ubicacion, String red, String tipo_dispositivo, String celda) {
